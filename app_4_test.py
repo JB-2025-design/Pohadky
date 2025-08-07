@@ -841,7 +841,7 @@ if vyber:
                 st.subheader("🏆 Výsledková listina")
                 st.info(st.session_state.final_report)
 
-                if st.session_state.game_started:
+            if st.session_state.game_started:
                 if st.checkbox("📜 Zobrazit historii odpovědí", key="history_math"):
                     st.markdown("---")
                     st.subheader("Historie řešení")
@@ -926,6 +926,7 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
 
 
 
