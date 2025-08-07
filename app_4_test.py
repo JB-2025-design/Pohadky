@@ -16,7 +16,7 @@ from fpdf import FPDF
 fairytales_data = {
     "Dráček z mechového lesa": {
         "text": "V hlubokém Mechovém lese, kde mechy byly měkké jako polštáře a paprsky slunce tančily mezi větvemi, bydlel malý dráček jménem Šimonek. Nebyl to žádný děsivý drak – byl celý zelený, měl kulaté bříško, třepotavá křidélka a smál se, až se mu od pusy místo ohně valily bubliny! Každý den létal nízko nad zemí a počítal, kolik hub vyrostlo, kolik ptáčků zpívá a kolik mravenců si staví cestu. Bavilo ho to – byl totiž moc zvědavý. Jednoho dne ale pršelo tak silně, že se všechny cestičky v lese roztekly. Dráček nevěděl, kudy domů. Sedl si pod kapradinu a smutně foukal bublinky. V tu chvíli kolem šla víla Klárka. „Šimonku, proč jsi smutný?“ zeptala se. „Ztratil jsem se! Neumím spočítat, kolik kroků vede k mojí jeskyni,“ povzdychl si dráček. „To nevadí,“ usmála se víla. „Spočítáme to spolu! Každých deset kroků označíme kamínkem.“ A tak šli. Po každých deseti krocích položili kamínek. Po dvaceti krocích – dva kamínky. Po třiceti – tři. A hádejte co? Když položili šestý kamínek, dráček vykřikl radostí: „To je moje jeskyně!“ Od té doby Šimonek vždy, když prší, pomáhá ostatním zvířátkům v lese najít cestu pomocí počítání kroků a kamínků. A víte co? Už se nikdy neztratil. Naučil se, že počítání může zachránit den.",
-        "moral": "Naučme se počítat – nejen čísla, ale i cestu k přátelství.",
+        "moral": "Naučme se prožívat – nejen čísla, ale i cestu k přátelství.",
         "obrazek_path": "dracek.png"
     },
     "O Šípkové Růžence": {
@@ -924,4 +924,5 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
 
