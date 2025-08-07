@@ -632,8 +632,6 @@ if vyber:
             else:
                 st.info("Žádná poznámka pro tuto úroveň.")
             
-            st.write("Image path:", image_path)
-            st.write("Soubor existuje:", os.path.exists(image_path))
             
             st.subheader("🧮 Úkoly")
             
@@ -926,3 +924,4 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
