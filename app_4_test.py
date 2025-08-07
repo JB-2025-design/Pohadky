@@ -837,7 +837,7 @@ if vyber:
                         st.session_state.score = st.session_state.tasks_solved_for_reveal
                     st.success("Vyřešil/a jsi všechny úkoly! Gratuluji!")
 
-             if st.session_state.game_started:
+            if st.session_state.game_started:
                 if st.checkbox("📜 Zobrazit historii odpovědí", key="history_math"):
                     st.markdown("---")
                     st.subheader("Historie řešení")
@@ -928,6 +928,7 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
 
 
 
