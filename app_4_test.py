@@ -837,6 +837,22 @@ if vyber:
                         st.session_state.score = st.session_state.tasks_solved_for_reveal
                     st.success("Vyřešil/a jsi všechny úkoly! Gratuluji!")
 
+             if st.session_state.game_started:
+                if st.checkbox("📜 Zobrazit historii odpovědí", key="history_math"):
+                    st.markdown("---")
+                    st.subheader("Historie řešení")
+                    for i, item in enumerate(reversed(st.session_state.history), 1):
+                        if len(item) == 4:
+                            q, a_user, a_correct, v = item
+                            display_correct_ans = a_correct
+                            if isinstance(a_correct, tuple):
+                                display_correct_ans = " nebo ".join(a_correct)
+
+                            if v == "✅ správně":
+                                st.markdown(f"{i}. {q} -> **{a_user}** {v}")
+                            else:
+                                st.markdown(f"{i}. {q} -> {a_user} (správná odpověď byla: **{display_correct_ans}**) {v}")
+            
             if st.session_state.final_report:
                 st.subheader("🏆 Výsledková listina")
                 st.info(st.session_state.final_report)
@@ -864,21 +880,7 @@ if vyber:
                             key="download_diploma_btn"
                         )
 
-            if st.session_state.game_started:
-                if st.checkbox("📜 Zobrazit historii odpovědí", key="history_math"):
-                    st.markdown("---")
-                    st.subheader("Historie řešení")
-                    for i, item in enumerate(reversed(st.session_state.history), 1):
-                        if len(item) == 4:
-                            q, a_user, a_correct, v = item
-                            display_correct_ans = a_correct
-                            if isinstance(a_correct, tuple):
-                                display_correct_ans = " nebo ".join(a_correct)
-
-                            if v == "✅ správně":
-                                st.markdown(f"{i}. {q} -> **{a_user}** {v}")
-                            else:
-                                st.markdown(f"{i}. {q} -> {a_user} (správná odpověď byla: **{display_correct_ans}**) {v}")
+           
                                 
             if st.session_state.game_started and st.session_state.tasks_solved_for_reveal >= TASKS_TO_REVEAL:
                 if st.button("Začít novou hru", key="restart_game_final"):
@@ -926,6 +928,7 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
 
 
 
