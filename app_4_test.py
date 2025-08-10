@@ -60,7 +60,7 @@ fairytales_data = {
         "obrazek_path": "pernikova_chaloupka.png"
     },
     "O slepičce a kohoutkovi": {
-        "text": "Byli jednou kohoutek Galois a slepička Poule. Celý den se spolu hrabali v prachu dvora a hledali dobrůtky. Byli nerozluční – vždy si dělili, co našli, a nikdy se nehádali. Jednoho dne, když už slunce zapadalo a země voněla večerem, našel kohoutek v hlíně zlatavé semínko – krásné, kulaté, lesklé, jaké ještě nikdy neviděli. „Jé, semínko!“ zakokrhal kohoutek. „Našel jsem ho první, je moje!“ Slepička ale sklopila hlavičku a tiše řekla: „Copak jsme se nedomluvili, že vše dělíme napůl?“ Kohoutek se zarazil. Dlouze se na semínko zadíval, pak na slepičku, a zase na semínko. „Ale když jsem ho našel první...“ zamumlal. A v tu chvíli se zlaté semínko zatřpytilo a začalo mizet. Kohoutek zůstal stát s otevřeným zobákem – semínko bylo pryč! V trávě zašuměl vánek a zněl jako hlas: „Co je sobecké, ztrácí se. Co je sdílené, roste.“ Kohoutek se podíval na slepičku. Zahanbeně sklonil hlavu. „Příště budeme dělit, ať najde kdo chce,“ řekl. A od té doby si vše, co našli, spravedlivě rozdělovali – i když to bylo jen jedno jediné semínko.",
+        "text": "Byli jednou kohoutek Galois a slepička Poule. Celý den se spolu hrabali v prachu dvora a hledali dobrůtky. Byli nerozluční a nikdy se nehádali. Jednoho dne, když už slunce zapadalo a země voněla večerem, našel kohoutek v hlíně zlatavé semínko – krásné, kulaté, lesklé, jaké ještě nikdy neviděli. „Jé, semínko!“ zakokrhal kohoutek. „Našel jsem ho první, je moje!“ Slepička ale sklopila hlavičku a tiše řekla: „Copak jsme se nedomluvili, že vše dělíme napůl?“ Kohoutek se zarazil. Dlouze se na semínko zadíval, pak na slepičku, a zase na semínko. „Ale když jsem ho našel první...“ zamumlal. A v tu chvíli se zlaté semínko zatřpytilo a začalo mizet. Kohoutek zůstal stát s otevřeným zobákem – semínko bylo pryč! V trávě zašuměl vánek a zněl jako hlas: „Co je sobecké, ztrácí se. Co je sdílené, roste.“ Kohoutek se podíval na slepičku. Zahanbeně sklonil hlavu. „Příště budeme dělit, ať najde kdo chce,“ řekl. A od té doby si vše, co našli, spravedlivě rozdělovali – i když to bylo jen jedno jediné semínko.",
         "moral": "Co je nalezeno pro sebe, bývá snadno ztraceno. Co je sdíleno, má sílu růst.",
         "obrazek_path": "slepicka.png"
     },
@@ -928,6 +928,7 @@ if vyber:
             
 else:
     st.warning("Nebyla vybrána žádná pohádka.")
+
 
 
 
