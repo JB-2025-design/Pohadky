@@ -1,0 +1,113 @@
+{
+    "1. třída – množiny": {
+      "rounds": [
+        [
+          {"text": "Která skupina má všechny stejné věci?", "options": ["a) ⚽⚽⚽", "b) ⚽🚗🧸", "c) 🚗🚲🛴"], "correct_option": "a"},
+          {"text": "Která skupina má všechny stejné věci?", "options": ["a) A A A", "b) A B C", "c) C C D"], "correct_option": "a"},
+          {"text": "Která skupina má všechny stejné věci?", "options": ["a) 3 3 3", "b) 3 4 5", "c) 1 1 2"], "correct_option": "a"},
+          {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🍎🍎🍎", "b) 🍎🍌🍐", "c) 🍐🍎🍎"], "correct_option": "a"},
+          {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🐶🐶🐶", "b) 🐶🐱🐭", "c) 🐭🐭🐹"], "correct_option": "a"},
+  
+          {"text": "Která skupina má různé věci?", "options": ["a) 🧸🧸🧸", "b) 🧸🚗⚽", "c) 🐶🐶🐶"], "correct_option": "b"},
+          {"text": "Která skupina má různé věci?", "options": ["a) B B B", "b) A B C", "c) D D D"], "correct_option": "b"},
+          {"text": "Která skupina má různé věci?", "options": ["a) 7 7 7", "b) 7 8 9", "c) 8 8 8"], "correct_option": "b"},
+          {"text": "Která skupina má různé věci?", "options": ["a) 🚗🚗🚗", "b) 🚗🚲🛴", "c) 🛴🛴🛴"], "correct_option": "b"},
+          {"text": "Která skupina má různé věci?", "options": ["a) 🍎🍎🍎", "b) 🍎🍐🍊", "c) 🍌🍌🍌"], "correct_option": "b"},
+  
+          {"text": "A={⚽,🏀}, B={🏀,🎾}, sjednocení A∪B:", "options": ["a) {⚽,🏀,🎾}", "b) {🏀}", "c) {🎾}"], "correct_option": "a"},
+          {"text": "A={A,B}, B={B,C}, sjednocení A∪B:", "options": ["a) {A,B,C}", "b) {B}", "c) {C}"], "correct_option": "a"},
+          {"text": "A={2,4}, B={4,6}, sjednocení A∪B:", "options": ["a) {2,4,6}", "b) {4}", "c) {6}"], "correct_option": "a"},
+          {"text": "A={🍎,🍐}, B={🍐,🍌}, sjednocení A∪B:", "options": ["a) {🍎,🍐,🍌}", "b) {🍎,🍌}", "c) {🍌}"], "correct_option": "a"},
+          {"text": "A={🐶,🐱}, B={🐱,🐭}, sjednocení A∪B:", "options": ["a) {🐶,🐱,🐭}", "b) {🐱}", "c) {🐶,🐭}"], "correct_option": "a"},
+  
+          {"text": "A={⚽,🏀}, B={🏀,🎾}, průnik A∩B:", "options": ["a) {⚽}", "b) {🏀}", "c) {🎾}"], "correct_option": "b"},
+          {"text": "A={A,B}, B={B,C}, průnik A∩B:", "options": ["a) {A}", "b) {B}", "c) {C}"], "correct_option": "b"},
+          {"text": "A={2,4}, B={4,6}, průnik A∩B:", "options": ["a) {4}", "b) {2}", "c) {6}"], "correct_option": "a"},
+          {"text": "A={🍎,🍐}, B={🍐,🍌}, průnik A∩B:", "options": ["a) {🍐}", "b) {🍎}", "c) {🍌}"], "correct_option": "a"},
+          {"text": "A={🐶,🐱}, B={🐱,🐭}, průnik A∩B:", "options": ["a) {🐱}", "b) {🐶}", "c) {🐭}"], "correct_option": "a"}
+        ],
+        [
+          {"text": "Rozdíl: A={⚽,🏀}, B={🏀,🎾}, A\\B:", "options": ["a) {⚽}", "b) {🏀}", "c) {🎾}"], "correct_option": "a"},
+          {"text": "Rozdíl: A={A,B}, B={B,C}, A\\B:", "options": ["a) {A}", "b) {B}", "c) {C}"], "correct_option": "a"},
+          {"text": "Rozdíl: A={2,4}, B={4,6}, A\\B:", "options": ["a) {2}", "b) {4}", "c) {6}"], "correct_option": "a"},
+          {"text": "Rozdíl: A={🍎,🍐}, B={🍐,🍌}, A\\B:", "options": ["a) {🍎}", "b) {🍐}", "c) {🍌}"], "correct_option": "a"},
+          {"text": "Rozdíl: A={🐶,🐱}, B={🐱,🐭}, A\\B:", "options": ["a) {🐶}", "b) {🐱}", "c) {🐭}"], "correct_option": "a"},
+  
+          {"text": "Která množina je prázdná?", "options": ["a) {}", "b) {A}", "c) {1}"], "correct_option": "a"},
+          {"text": "Která množina obsahuje čísla?", "options": ["a) {⚽,🏀}", "b) {2,3,4}", "c) {A,B,C}"], "correct_option": "b"},
+          {"text": "Která množina obsahuje písmena?", "options": ["a) {⚽,🏀}", "b) {2,3,4}", "c) {A,B,C}"], "correct_option": "c"},
+          {"text": "Která množina je homogenní?", "options": ["a) {A,A,A}", "b) {A,B,C}", "c) {1,2,3}"], "correct_option": "a"},
+          {"text": "Která množina je heterogenní?", "options": ["a) {A,A,A}", "b) {A,1,⚽}", "c) {1,1,1}"], "correct_option": "b"},
+  
+          {"text": "Jaký je průnik {A,B} a {B,C}?", "options": ["a) {A}", "b) {B}", "c) {C}"], "correct_option": "b"},
+          {"text": "Jaké je sjednocení {1,2} a {2,3}?", "options": ["a) {1,2,3}", "b) {2}", "c) {3}"], "correct_option": "a"},
+  
+          {"text": "Rozdíl {1,2,3} a {2}:", "options": ["a) {1,3}", "b) {2,3}", "c) {1,2}"], "correct_option": "a"},
+          {"text": "Rozdíl {🍎,🍌} a {🍌}:", "options": ["a) {🍎}", "b) {🍌}", "c) {}"], "correct_option": "a"},
+          {"text": "Rozdíl {A,B,C} a {B}:", "options": ["a) {A,C}", "b) {B}", "c) {A,B}"], "correct_option": "a"},
+          {"text": "Která je prázdná množina po průniku {⚽} a {🏀}?", "options": ["a) {}", "b) {⚽}", "c) {🏀}"], "correct_option": "a"},
+          {"text": "Průnik {2,4} a {4,6}:", "options": ["a) {4}", "b) {2}", "c) {6}"], "correct_option": "a"}
+        ],
+        [
+            {"text": "Která skupina má všechny stejné věci?", "options": ["a) ⚽⚽⚽", "b) ⚽🚗🧸", "c) 🚗🚲🛴"], "correct_option": "a"},
+            {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🐶🐶🐶", "b) 🐶🐱🐭", "c) 🧸🐻🐨"], "correct_option": "a"},
+            {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🚗🚗🚗", "b) 🚗🛴🚲", "c) 🚲🚗🚲"], "correct_option": "a"},
+            {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🦋🦋🦋", "b) 🦋🐝🐞", "c) 🐝🐞🦋"], "correct_option": "a"},
+            {"text": "Která skupina má všechny stejné věci?", "options": ["a) 🍎🍎🍎", "b) 🍎🍐🍌", "c) 🍌🍎🍐"], "correct_option": "a"},
+          
+            {"text": "Která skupina má různé věci?", "options": ["a) 🧸🧸🧸", "b) 🧸🚗⚽", "c) 🐶🐶🐶"], "correct_option": "b"},
+            {"text": "Která skupina má různé věci?", "options": ["a) 🚲🚲🚲", "b) 🚲🛴🚗", "c) 🛴🛴🛴"], "correct_option": "b"},
+            {"text": "Která skupina má různé věci?", "options": ["a) 🍎🍎🍎", "b) 🍎🍐🍊", "c) 🍐🍐🍐"], "correct_option": "b"},
+            {"text": "Která skupina má různé věci?", "options": ["a) 🐠🐠🐠", "b) 🐠🐢🦀", "c) 🦀🦀🦀"], "correct_option": "b"},
+            {"text": "Která skupina má různé věci?", "options": ["a) 🚗🚗🚗", "b) 🚗🚲🛴", "c) 🛴🛴🛴"], "correct_option": "b"},
+          
+            {"text": "A={⚽,🏀}, B={🏀,🎾}, sjednocení A∪B:", "options": ["a) {⚽,🏀,🎾}", "b) {🏀}", "c) {🎾}"], "correct_option": "a"},
+            {"text": "A={🚗,🚲}, B={🚲,🛴}, sjednocení A∪B:", "options": ["a) {🚗,🚲,🛴}", "b) {🚗}", "c) {🛴}"], "correct_option": "a"},
+            {"text": "A={🐶,🐱}, B={🐱,🐭}, sjednocení A∪B:", "options": ["a) {🐶,🐱,🐭}", "b) {🐱}", "c) {🐶,🐭}"], "correct_option": "a"},
+            {"text": "A={🍎,🍐}, B={🍐,🍌}, sjednocení A∪B:", "options": ["a) {🍎,🍐,🍌}", "b) {🍎,🍌}", "c) {🍌}"], "correct_option": "a"},
+            {"text": "A={🦋,🐝}, B={🐝,🐞}, sjednocení A∪B:", "options": ["a) {🦋,🐝,🐞}", "b) {🐝}", "c) {🐞}"], "correct_option": "a"},
+          
+            {"text": "A={⚽,🏀}, B={🏀,🎾}, průnik A∩B:", "options": ["a) {⚽}", "b) {🏀}", "c) {🎾}"], "correct_option": "b"},
+            {"text": "A={🚗,🚲}, B={🚲,🛴}, průnik A∩B:", "options": ["a) {🚲}", "b) {🚗}", "c) {🛴}"], "correct_option": "a"},
+            {"text": "A={🐶,🐱}, B={🐱,🐭}, průnik A∩B:", "options": ["a) {🐱}", "b) {🐶}", "c) {🐭}"], "correct_option": "a"},
+            {"text": "A={🍎,🍐}, B={🍐,🍌}, průnik A∩B:", "options": ["a) {🍐}", "b) {🍎}", "c) {🍌}"], "correct_option": "a"},
+            {"text": "A={🦋,🐝}, B={🐝,🐞}, průnik A∩B:", "options": ["a) {🐝}", "b) {🦋}", "c) {🐞}"], "correct_option": "a"}
+          ]
+         
+      ]
+    },
+    "2. třída – sudá/lichá": {
+      "rounds": [
+        [
+          {"text": "Která množina obsahuje pouze sudá čísla?", "options": ["a) {2,4,6}", "b) {1,3,5}", "c) {2,3,4}"], "correct_option": "a"},
+          {"text": "Která množina obsahuje pouze lichá čísla?", "options": ["a) {2,5,7}", "b) {1,3,9}", "c) {0,1,2}"], "correct_option": "b"},
+          {"text": "Kolik sudých čísel je v množině {1,2,3,4,6}?", "options": ["a) 2", "b) 3", "c) 4"], "correct_option": "b"},
+          {"text": "Kolik lichých čísel je v množině {0,1,2,3,5}?", "options": ["a) 2", "b) 3", "c) 4"], "correct_option": "b"},
+          {"text": "Který prvek NEpatří do množiny sudých čísel?", "options": ["a) 8", "b) 12", "c) 7"], "correct_option": "c"},
+          {"text": "Která množina je správně rozdělena na sudé / liché? A={2,4,6}, B={1,3,5}", "options": ["a) Ano", "b) Ne", "c) Nelze rozhodnout"], "correct_option": "a"},
+          {"text": "Která množina je špatně: A={2,4,7} (sudé)", "options": ["a) Ano, je špatně", "b) Ne, je správně", "c) Nelze rozhodnout"], "correct_option": "a"},
+          {"text": "Je 0 sudé číslo?", "options": ["a) Ano", "b) Ne", "c) Jen někdy"], "correct_option": "a"},
+          {"text": "Vyber množinu s více sudými než lichými:", "options": ["a) {1,2,3}", "b) {2,4,5,6}", "c) {1,3,5}"], "correct_option": "b"},
+          {"text": "Vyber množinu s více lichými než sudými:", "options": ["a) {2,4,6}", "b) {1,3,5,8}", "c) {2,2,3,4}"], "correct_option": "b"}
+        ]
+      ]
+    },
+  
+    "2. třída – násobky": {
+      "rounds": [
+        [
+          {"text": "Která množina obsahuje pouze násobky 2?", "options": ["a) {2,4,8}", "b) {2,3,6}", "c) {1,2,3}"], "correct_option": "a"},
+          {"text": "Která množina obsahuje pouze násobky 3?", "options": ["a) {3,6,9}", "b) {6,9,10}", "c) {3,5,9}"], "correct_option": "a"},
+          {"text": "Které číslo NENÍ násobkem 4?", "options": ["a) 12", "b) 16", "c) 18"], "correct_option": "c"},
+          {"text": "Která množina obsahuje pouze násobky 5?", "options": ["a) {5,10,15}", "b) {5,12,15}", "c) {10,15,16}"], "correct_option": "a"},
+          {"text": "Vyber množinu násobků 6:", "options": ["a) {6,12,18}", "b) {6,9,12}", "c) {3,6,7}"], "correct_option": "a"},
+          {"text": "Které číslo je násobkem 9?", "options": ["a) 18", "b) 21", "c) 25"], "correct_option": "a"},
+          {"text": "Vyber množinu násobků 2 a 3 zároveň (násobky 6):", "options": ["a) {6,12,18}", "b) {2,3,6}", "c) {3,6,9}"], "correct_option": "a"},
+          {"text": "Která množina je chybná pro násobky 8?", "options": ["a) {8,16,24}", "b) {8,12,20}", "c) {16,24,32}"], "correct_option": "b"},
+          {"text": "Vyber množinu násobků 7:", "options": ["a) {7,14,21}", "b) {7,12,21}", "c) {14,21,25}"], "correct_option": "a"},
+          {"text": "Která množina jsou násobky 3 v rozsahu do 12?", "options": ["a) {3,6,9,12}", "b) {3,5,9,12}", "c) {6,9,12,15}"], "correct_option": "a"}
+        ]
+      ]
+    }
+}
+  
