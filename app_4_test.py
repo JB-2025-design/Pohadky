@@ -512,40 +512,46 @@ def cjl_gen_pick_syllable_easy(n: int = 30):
     return tasks
 
 # ---------- ČJ: generátor 'Tvrdé a měkké čtení po d, t, n' ----------
+# ---------- ČJ: generátor 'Tvrdé a měkké čtení po d, t, n' ----------
 def cjl_gen_soft_hard_dtn(n: int = 30):
     """
-    MCQ: 'Slabiku „..“ ve slově „…“ čteme: a) měkce, b) tvrdě, c) obojetně'
-    Pravidlo (zjednodušené): di/ti/ni; dí/tí/ní; dy/ty/ny; dý/tý/ný → tvrdě.
+    MCQ: 'Slabiku „..“ ve slově „…“ čteme: a) měkce, b) tvrdě, c) obě možnosti'
+    Zjednodušené pravidlo: měkce = di/ti/ni; dí/tí/ní. Tvrdě = dy/ty/ny; dý/tý/ný.
     """
+    import random
     soft_examples = [
         ("dí", "díky"), ("di", "divadlo"), ("ti", "děti"),("ti", "cítit"),
         ("ti", "ticho"), ("ti", "tisk"), ("dí", "díra"), ("di", "divák"),("di","hodiny"),
         ("dí", "chodí"),("dí","budík"),("dí","budí"),("tí","fotí"),("ti","tiše!"),
         ("ti", "tati!"),("tí","letí"),("dí","budík"), ("tí","smetí"),("tí","svítí"),
-        ("tí","kvítí"),("ti","tisíc",),("ti","štika"),("ti","čerti"),("tí","utíká")
+        ("tí","kvítí"),("ti","tisíc",),("ti","štika"),("ti","čerti"),("tí","utíká"),
         ("tí","natírá"),("ní","koník"),("ni","nikdy"),("ní", "jarní"),("ni","knihy"),
-        ("tí","stíny")("ní","zvoní"),("ní","vodník"),("ní","peníze"),("ní", "kominík"),
-        ("ní", "nízko"), ("ni", "niva"), ("tí","platí"),("di","rodina")("di","divoký")
+        ("tí","stíny"),("ní","zvoní"),("ní","vodník"),("ní","peníze"),("ní", "kominík"),
+        ("ní", "nízko"), ("tí","platí"),("di","rodina"),("di","divoký")
     ]
     hard_examples = [
         ("dý", "dýka"), ("dý", "dýně"),("dý","dým"),("dy","tady"),("dý","dýmka"),
         ("dy","jahody"),("ny","hodiny"),("dý","mladý"),("ty","boty"),("ty","paty"),
         ("ty","noty"),("tý","motýli"),("ty","motyka"),("ný","líný"),("ny","sny"),("ny","dny"),
         ("ny","rány"),("ny","ceny"),("dy","nikdy"),("ný","černý"),("ny","zvony"),("ny","bedny"),
-        ("ty", "typ"),    ("tý", "týden"), ("ný", "kamenný"), ("dy","schody"),("dy","rady")  # 'ný' – hodnotíme čtení 'n' + 'ý' jako tvrdé
+        ("ty", "typ"),  ("tý", "týden"), ("ný", "kamenný"), ("dy","schody"),("dy","rady"),("ný","hodný")  # 'ný' – hodnotíme čtení 'n' + 'ý' jako tvrdé
     ]
-    import random
+    # připravíme banku s označením správné odpovědi ('a' = měkce, 'b' = tvrdě)
+    bank = [("a", syl, word) for syl, word in soft_examples] + \
+           [("b", syl, word) for syl, word in hard_examples]
+    random.shuffle(bank)
+
+    # výběr bez opakování do vyčerpání zásoby; případný „doběr“ s opakováním
+    if n <= len(bank):
+        chosen = bank[:n]
+    else:
+        chosen = bank + random.choices(bank, k=n - len(bank))
+
     out = []
-    for _ in range(n):
-        if random.random() < 0.6:
-            syl, word = random.choice(soft_examples)
-            corr = "a"; options = ["a) měkce", "b) tvrdě", "c) obě možnosti"]
-        else:
-            syl, word = random.choice(hard_examples)
-            corr = "b"; options = ["a) měkce", "b) tvrdě", "c) obě možnosti"]
+    for corr, syl, word in chosen:
         out.append({
             "text": f"Slabiku **„{syl}“** ve slově **„{word}“** čteme:",
-            "options": options,
+            "options": ["a) měkce", "b) tvrdě", "c) obě možnosti"],
             "correct_option": corr
         })
     return out
@@ -2422,8 +2428,7 @@ def render_topic_select(subject, grade):
         st.session_state.best_score = best["score"]
         st.session_state.best_time = best["time"]
 
-        st.rerun()  # <— správně jen při změně
-
+        
     st.selectbox(
         "Vyber téma:",
         options=opts,
