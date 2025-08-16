@@ -1657,7 +1657,8 @@ cjl_notes_by_level = {
     "9. třída": ["Rekapitulace pravopisu; literární minimum."]
 }
 math_notes_by_level = {
-    "1. třída": ["Sčítání a odčítání do 20 (s i bez přechodu přes 10).",
+    "1. třída": ["Sčítání a odčítání do 10.",
+                "Sčítání a odčítání do 20 (s i bez přechodu přes 10).", 
                  "Množiny – základ: {…}, počet prvků, „patří / nepatří“ (∈ / ∉) – intuitivně.",
                  "Formát odpovědi: celé číslo (např. 14)."],
     "2. třída": ["Sčítání/odčítání do 100; malá násobilka 2–9.","Formát odpovědi: celé číslo."],
@@ -1796,9 +1797,69 @@ MA_TOPIC_FORMAT.setdefault("9. třída", {}).update({
 # po definici MA_TOPIC_FORMAT:
 MA_TOPIC_FORMAT["7. třída"]["Lineární rovnice (základ)"] = "číslo na 2 desetinná místa (tečka NEBO čárka)"
 MA_TOPIC_FORMAT["2. třída"].update({
-    "Sudá/lichá v množině": "MCQ – vyber a/b/c",
-    "Násobky 2–9 – třídění do množin": "MCQ – vyber a/b/c",
+    "Sudá/lichá v množině": "Vyber jednu z možností a/b/c",
+    "Násobky 2–9 – třídění do množin": "Vyber jednu z možností a/b/c",
 })
+
+# Doplňkové poznámky k vybraným tématům (zobrazí se pod hlavní větou pro ročník)
+MA_TOPIC_HINTS = {
+    "3. třída": {
+        "Množiny – A∪B, A∩B, A\\B (1..20)": [
+            "Uvažuj U={1..20}, A a B jsou množiny čísel podle zadání."
+        ],
+        "Venn – 2 množiny (čísla 1..20)": [
+            "Zamysli se, zda prvek patří do A, do B, do obou, nebo do žádné."
+        ],
+    },
+    "4. třída": {
+        "Venn – 3 množiny (2/3/5)": [
+            "A: násobky 2, B: násobky 3, C: násobky 5; sleduj průniky."
+        ],
+        "Kartézský součin – počty": [
+            "Počet prvků A×B je |A|·|B|."
+        ],
+    },
+    "5. třída": {
+        "Inkluze–exkluze (2–3 množ.)": [
+            "Pro dvě množiny platí |A∪B|=|A|+|B|−|A∩B|."
+        ],
+        "Komplement, De Morgan": [
+            "De Morgan: (A∪B)ᶜ = Aᶜ ∩ Bᶜ a (A∩B)ᶜ = Aᶜ ∪ Bᶜ."
+        ],
+    },
+    "6. třída": {
+        "Intervaly jako množiny": [
+            "Otevřený ( ), uzavřený [ ]; porovnej s nerovnicemi."
+        ],
+        "Sjednocení/průnik intervalů": [
+            "Průnik = společná část; sjednocení = všechno dohromady."
+        ],
+    },
+    "7. třída": {
+        "Kartézský součin – mřížka": [
+            "Počet bodů v mřížce m×n je m·n."
+        ],
+        "Relace vs. funkce (A→B)": [
+            "Funkce: každému x∈A přiřazuje právě jedno y∈B."
+        ],
+    },
+    "8. třída": {
+        "Obraz/předobraz množiny": [
+            "f(A) = {f(x): x∈A}, f⁻¹(B) = {x: f(x)∈B}."
+        ],
+        "Složené nerovnice – intervaly": [
+            "Spoj dvě nerovnice a převeď na interval(y)."
+        ],
+    },
+    "9. třída": {
+        "Ekvivalence, třídy (mod n)": [
+            "[k] = {… , k−n, k, k+n, …}; je to rozklad Z na n tříd.",
+        ],
+        "Mocnina množiny, 2^n": [
+            "Počet podmnožin množiny s n prvky je 2^n."
+        ],
+    },
+}
 
 it_notes_by_level = {
     "1. třída": ["Tisk textu a čísel pomocí print."],
@@ -2221,6 +2282,15 @@ MA_JSON_TOPICS = {
     ("1. třída", "Množiny – základ"): "1. třída – množiny",
     ("2. třída", "Sudá/lichá v množině"): "2. třída – sudá/lichá",
     ("2. třída", "Násobky 2–9 – třídění do množin"): "2. třída – násobky",
+    ("3. třída", "Venn – 2 množiny (čísla 1..20)"): "3. třída – Venn 2",
+    ("4. třída", "Venn – 3 množiny (2/3/5)"): "4. třída – Venn 3",
+    ("5. třída", "Inkluze–exkluze (2–3 množ.)"): "5. třída – Inkluze exkluze",
+    ("5. třída", "Komplement, De Morgan"): "5. třída – De Morgan",
+    ("6. třída", "Intervaly jako množiny"): "6. třída – Intervaly 1",
+    ("6. třída", "Sjednocení/průnik intervalů"): "6. třída – Intervaly 2",
+    ("7. třída", "Relace vs. funkce (A→B)"): "7. třída – Relace funkce",
+    ("8. třída", "Obraz/předobraz množiny"): "8. třída – Obraz předobraz",
+    ("9. třída", "Ekvivalence, třídy (mod n)"): "9. třída – Ekviv třídy",
 }
 
 def generate_diploma_pdf(username, score, time_s, fairytale_title,
@@ -2397,6 +2467,7 @@ def render_topic_select(subject, grade):
     else:
         opts = ["(bez tématu)"]
 
+
     key_sel = f"sel_{subject}_{grade}"
     confirmed_key = topic_state_key(subject, grade)
     if st.session_state.get(confirmed_key) is None:
@@ -2438,59 +2509,60 @@ def render_topic_select(subject, grade):
     )
     return st.session_state[confirmed_key]
 
-
 def build_dynamic_notes(subject, grade, confirmed_topic):
     if subject == "MA":
-        base = math_notes_by_level.get(grade, [])
+        # jen formát + případné hinty k tématu
         fmt = MA_TOPIC_FORMAT.get(grade, {}).get(confirmed_topic, "celé číslo")
         notes = [f"Téma: **{confirmed_topic}** · Formát odpovědi: **{fmt}**."]
-        if base: notes.append(base[0])
+        for line in MA_TOPIC_HINTS.get(grade, {}).get(confirmed_topic, []):
+            notes.append(line)
         return notes
 
     elif subject == "ČJ":
         base = cjl_notes_by_level.get(grade, [])
-        notes = [f"Téma: **{confirmed_topic}**."]
+        return [f"Téma: **{confirmed_topic}**."] + (base[:1] if base else [])
 
-        # 3. třída – tahák
-        try:
-            if grade == "3. třída":
-                extra = CJL_TOPIC_NOTES_G3.get(confirmed_topic)
-                if extra: notes.append(extra)
-        except NameError:
-            pass
-        # 4. třída – tahák
-        try:
-            if grade == "4. třída":
-                extra = CJL_TOPIC_NOTES_G4.get(confirmed_topic)
-                if extra: notes.append(extra)
-        except NameError:
-            pass
-        # 5. třída – tahák
-        try:
-            if grade == "5. třída":
-                extra = CJL_TOPIC_NOTES_G5.get(confirmed_topic)
-            if extra: notes.append(extra)
-        except NameError:
-            pass
-        # 6. třída – tahák
-        try:
-            if grade == "6. třída":
-                extra = CJL_TOPIC_NOTES_G6.get(confirmed_topic)
-            if extra: notes.append(extra)
-        except NameError:
-            pass
-        
-        # 9. třída – tahák
-        try:
-            if grade == "9. třída":
-                extra = CJL_TOPIC_NOTES_G9.get(confirmed_topic)
-            if extra: notes.append(extra)
-        except NameError:
-            pass
+    else:  # IT
+        base = it_notes_by_level.get(grade, [])
+        return [f"Téma: **{confirmed_topic}**."] + (base[:1] if base else [])
 
-         # 9. třída – mini-anotace
-        # uvnitř elif subject == "ČJ":
-       # uvnitř elif subject == "ČJ":
+def build_dynamic_notes(subject, grade, confirmed_topic):
+    notes = []
+
+    if subject == "MA":
+        # jen formát + případné drobné hinty k tématu
+        fmt = MA_TOPIC_FORMAT.get(grade, {}).get(confirmed_topic, "celé číslo")
+        notes.append(f"Téma: **{confirmed_topic}** · Formát odpovědi: **{fmt}**.")
+        for line in MA_TOPIC_HINTS.get(grade, {}).get(confirmed_topic, []):
+            notes.append(line)
+        return notes
+
+    elif subject == "ČJ":
+        # 1) základní řádky
+        notes.append(f"Téma: **{confirmed_topic}**.")
+        base = cjl_notes_by_level.get(grade, [])
+        if base:
+            notes.append(base[0])  # obecná věta k ročníku
+
+        # 2) taháky po ročnících (3.–9.) – bezpečně přes globals()
+        grade_to_var = {
+            "3. třída": "CJL_TOPIC_NOTES_G3",
+            "4. třída": "CJL_TOPIC_NOTES_G4",
+            "5. třída": "CJL_TOPIC_NOTES_G5",
+            "6. třída": "CJL_TOPIC_NOTES_G6",
+            "7. třída": "CJL_TOPIC_NOTES_G7",
+            "8. třída": "CJL_TOPIC_NOTES_G8",
+            "9. třída": "CJL_TOPIC_NOTES_G9",
+        }
+        vname = grade_to_var.get(grade)
+        if vname:
+            d = globals().get(vname, {})
+            if isinstance(d, dict):
+                extra = d.get(confirmed_topic)
+                if extra:
+                    notes.append(extra)
+
+        # 3) 9. třída – mini-anotace (pokud máš tyto helpery)
         if grade == "9. třída":
             try:
                 if confirmed_topic == "Literární druhy a žánry":
@@ -2504,13 +2576,14 @@ def build_dynamic_notes(subject, grade, confirmed_topic):
             except Exception:
                 pass
 
-
-        if base: notes.append(base[0])
         return notes
 
-    else:
+    else:  # IT
+        notes.append(f"Téma: **{confirmed_topic}**.")
         base = it_notes_by_level.get(grade, [])
-        return [f"Téma: **{confirmed_topic}**."] + (base[:1] if base else [])
+        if base:
+            notes.append(base[0])
+        return notes
 
 
 # =========================
@@ -2587,8 +2660,38 @@ def generate_grade2_topic_problem(topic: str):
     return q, str(a + b), "int", None
 
 # --- 3. třída: témata navázaná na úlohy ---
+def generate_grade3_sets_problem(topic: str):
+    t = (topic or "").lower()
+    if "množiny" in t and "1..20" in t:
+        U = list(range(1, 21))
+        A = [x for x in U if x % 2 == 0]      # sudá
+        B = [x for x in U if x % 3 == 0]      # násobky 3
+        q = "Nechť A= {sudá ≤20}, B= {násobky 3 ≤20}. Kolik prvků má **A ∩ B**?"
+        ans = str(len(set(A).intersection(B)))
+        return q, ans, "int", None
+    # fallback
+    return None
+
 def generate_grade3_topic_problem(topic: str):
     t = (topic or "").strip().lower()
+
+    # 3. třída – množiny (počty prvků)
+    if "množiny" in t and "1..20" in t:
+        U = list(range(1, 21))
+        # definice A, B jako číselné vlastnosti (lze rozšiřovat)
+        A = {x for x in U if x % 2 == 0}       # sudá
+        B = {x for x in U if x % 3 == 0}       # násobky 3
+        kind = random.choice(["A∩B", "A∪B", "A\\B"])
+        if kind == "A∩B":
+            q = "U={1..20}, A=sudá, B=násobky 3. Kolik prvků má **A ∩ B**?"
+            ans = str(len(A & B))
+        elif kind == "A∪B":
+            q = "U={1..20}, A=sudá, B=násobky 3. Kolik prvků má **A ∪ B**?"
+            ans = str(len(A | B))
+        else:
+            q = "U={1..20}, A=sudá, B=násobky 3. Kolik prvků má **A \\ B**?"
+            ans = str(len(A - B))
+    return q, ans, "int", None
 
     # 3. třída – Sčítání/odčítání do 1000
     if "sčítání" in t or "odčítání" in t or "1000" in t:
@@ -2621,9 +2724,16 @@ def generate_grade3_topic_problem(topic: str):
     a = random.randint(0, 1000); b = random.randint(0, 1000 - a)
     return f"${a} + {b}$", str(a + b), "int", None
 
+
 # --- 4. třída: témata navázaná na úlohy ---
 def generate_grade4_topic_problem(topic: str):
     t = (topic or "").strip().lower()
+
+    if "kartézský" in t or "součin" in t:
+        m = random.randint(2, 12)
+        n = random.randint(2, 12)
+        q = f"Měj |A|={m}, |B|={n}. Kolik prvků má **A×B**?"
+        return q, str(m*n), "int", None
 
     # Násobení vícecifernými čísly (výsledek celé číslo)
     if "násobení" in t:
@@ -2663,6 +2773,15 @@ def _fmt2(n):  # helper: na dvě desetinná místa jako string
 
 def generate_grade5_topic_problem(topic: str):
     t = (topic or "").strip().lower()
+
+    if "inkluz" in t or "exkluz" in t or "∪" in t:
+        # 2 množiny (bez pasti): zajisti konzistenci
+        a = random.randint(6, 20)
+        b = random.randint(6, 20)
+        inter = random.randint(0, min(a, b) - 1)
+        q = f"Je dáno |A|={a}, |B|={b}, |A∩B|={inter}. Urči **|A∪B|**."
+        ans = str(a + b - inter)
+        return q, ans, "int", None
 
     # Desetinná čísla (sčítání/odčítání, výsledek na 2 des. místa)
     if "desetinn" in t:
@@ -2821,6 +2940,12 @@ def _fmt_int(n: int) -> str:
 def generate_grade7_topic_problem(topic: str):
     t = (topic or "").strip().lower()
 
+    if "kartézský" in t or "mřížka" in t or "mrizka" in t:
+        m = random.randint(3, 15)  # počet x-ových hodnot
+        n = random.randint(3, 15)  # počet y-ových hodnot
+        q = f"Kolik bodů má mřížka se souřadnicemi x∈{{1..{m}}}, y∈{{1..{n}}}? (počet prvků A×B)"
+        return q, str(m*n), "int", None
+
     # Celá čísla – sčítání/odčítání/násobení se zápornými
     if "celá" in t or "cela" in t:
         import random
@@ -2932,6 +3057,12 @@ def generate_grade8_topic_problem(topic: str):
 
 def generate_grade9_topic_problem(topic: str):
     t = (topic or "").strip().lower()
+
+    if "mocnina" in t or "2^" in t or "2²" in t:
+        n = random.randint(1, 12)
+        q = f"Kolik podmnožin má množina s **n={n}** prvky?"
+        return q, str(2**n), "int", None
+
 
     # — Rovnice (obecněji): ax + b = cx + d  → x na 2 desetinná místa
     if "rovnic" in t and "x^2" not in t and "x²" not in t:
