@@ -108,6 +108,111 @@
           {"text": "Která množina jsou násobky 3 v rozsahu do 12?", "options": ["a) {3,6,9,12}", "b) {3,5,9,12}", "c) {6,9,12,15}"], "correct_option": "a"}
         ]
       ]
-    }
+    },
+    "3. třída – Venn 2": {
+    "rounds": [
+      [
+        {"text": "U={1..20}, A=sudá, B=násobky 3. Kde leží číslo 12?", "options": ["a) A\\B", "b) B\\A", "c) A∩B"], "correct_option": "c"},
+        {"text": "U={1..20},, A=sudá, B=násobky 3. Která čísla jsou v A∩B?", "options": ["a) {6,12,18}", "b) {3,6,9}", "c) {12,15,18}"], "correct_option": "a"},
+        {"text": "U={120},, A=prvočísla, B=menší než 10. Kde leží 11?", "options": ["a) A∩B", "b) A\\B", "c) U\\(A∪B)"], "correct_option": "b"},
+        {"text": "U={1..20},, A=sudá, B=násobky 3. Kde je 8?", "options": ["a) A\\B", "b) B\\A", "c) A∩B"], "correct_option": "a"},
+        {"text": "U={1..20},, A=sudá, B=násobky 3. Kde je 9?", "options": ["a) A\\B", "b) B\\A", "c) A∩B"], "correct_option": "b"},
+        {"text": "U={1..20},, A=čísla ≤10, B=čísla ≥10. Které tvrzení platí?", "options": ["a) A∩B je prázdná množina", "b) A∪B = U", "c) A = B"], "correct_option": "b"}
+      ]
+    ]
+  },
+
+  "4. třída – Venn 3": {
+    "rounds": [
+      [
+        {"text": "U={1..60}, A=násobky 2, B=násobky 3, C=násobky 5. Kde leží 30?", "options": ["a) jen A∩B", "b) A∩B∩C", "c) jen A"], "correct_option": "b"},
+        {"text": "U={1..60}, A=2, B=3, C=5. Kde leží 21?", "options": ["a) B\\(A∪C)", "b) A∩B", "c) A∩C"], "correct_option": "a"},
+        {"text": "U={1..60}, A=2, B=3, C=5. Kde leží 10?", "options": ["a) A∩C", "b) A∩B∩C", "c) B∩C"], "correct_option": "a"},
+        {"text": "U={1..60}, A=2, B=3, C=5. Kde leží 12?", "options": ["a) A∩B", "b) A∩C", "c) B∩C"], "correct_option": "a"},
+        {"text": "U={1..60}, A=2, B=3, C=5. Kde leží 25?", "options": ["a) C\\(A∪B)", "b) A∩C", "c) A∩B"], "correct_option": "a"},
+        {"text": "U={1..60}, A=2, B=3, C=5. Kde leží 45?", "options": ["a) A∩B", "b) B∩C", "c) A∩B∩C"], "correct_option": "b"}
+      ]
+    ]
+  },
+
+  "5. třída – Inkluze exkluze": {
+    "rounds": [
+      [
+        {"text": "|A|=10, |B|=8, |A∩B|=3. Urči |A∪B|.", "options": ["a) 13", "b) 15", "c) 18"], "correct_option": "b"},
+        {"text": "|A|=12, |B|=7, |A∩B|=5. Urči |A∪B|.", "options": ["a) 14", "b) 19", "c) 24"], "correct_option": "a"},
+        {"text": "|A|=20, |B|=15, |A∩B|=5. Urči |A∪B|.", "options": ["a) 25", "b) 30", "c) 35"], "correct_option": "b"},
+        {"text": "|A|=9, |B|=11, |A∩B|=4. Urči |A∪B|.", "options": ["a) 14", "b) 16", "c) 20"], "correct_option": "b"},
+        {"text": "|A|=8, |B|=8, |A∩B|=0. Urči |A∪B|.", "options": ["a) 8", "b) 16", "c) 0"], "correct_option": "b"},
+        {"text": "|A|=6, |B|=5, |A∩B|=2, |C|=4, |A∩C|=1, |B∩C|=1, |A∩B∩C|=0. Urči |A∪B∪C|.", "options": ["a) 13", "b) 15", "c) 16"], "correct_option": "a"}
+      ]
+    ]
+  },
+
+  "5. třída – De Morgan": {
+    "rounds": [
+      [
+        {"text": "U={1,..,10}, A=sudá, B=prvočísla. Co je (A∪B)^c?", "options": ["a) lichá neprvočísla", "b) sudá prvočísla", "c) všechna čísla"], "correct_option": "a"},
+        {"text": "Vyber správnou rovnost:", "options": ["a) (A∪B)^c = A^c ∩ B^c", "b) (A∪B)^c = A^c ∪ B^c", "c) (A∩B)^c = A ∩ B"], "correct_option": "a"},
+        {"text": "U={1,..,10}, A=≤5, B=≥8. Co je U\\(A∪B)?", "options": ["a) {6,7}", "b) {5,6,7,8}", "c) {1,10}"], "correct_option": "a"},
+        {"text": "Které tvrzení je pravdivé?", "options": ["a) (A∩B)^c = A^c ∪ B^c", "b) (A∩B)^c = A^c ∩ B^c", "c) A^c = U\\A^c"], "correct_option": "a"}
+      ]
+    ]
+  },
+
+  "6. třída – Intervaly 1": {
+    "rounds": [
+      [
+        {"text": "Který interval odpovídá nerovnici x > 2?", "options": ["a) (-∞,2)", "b) (2,∞)", "c) (-∞,2]"], "correct_option": "b"},
+        {"text": "Který interval odpovídá x ≤ 5?", "options": ["a) (-∞,5]", "b) (-∞,5)", "c) [5,∞)"], "correct_option": "a"},
+        {"text": "Patří číslo 3 do intervalu [3,7)?", "options": ["a) Ano", "b) Ne", "c) Jen někdy"], "correct_option": "a"},
+        {"text": "Patří číslo 7 do intervalu [3,7)?", "options": ["a) Ano", "b) Ne", "c) Nelze rozhodnout"], "correct_option": "b"},
+        {"text": "Který zápis je správně pro x ∈ ⟨-1,4⟩ (včetně krajů)?", "options": ["a) (-1,4)", "b) [-1,4]", "c) (-1,4]"], "correct_option": "b"}
+      ]
+    ]
+  },
+
+  "6. třída – Intervaly 2": {
+    "rounds": [
+      [
+        {"text": "Urči průnik: (-∞,2) ∩ (0,5).", "options": ["a) (-∞,0]", "b) (0,2)", "c) (2,5)"], "correct_option": "b"},
+        {"text": "Urči sjednocení: [1,3] ∪ (3,6].", "options": ["a) [1,6]", "b) [1,3) ∪ (3,6]", "c) [1,6] bez 3"], "correct_option": "a"},
+        {"text": "Urči průnik: [0,4] ∩ [3,7].", "options": ["a) [3,4]", "b) [0,7]", "c) (3,4)"], "correct_option": "a"},
+        {"text": "Urči sjednocení: (-1,1) ∪ [1,2).", "options": ["a) (-1,2)", "b) (-1,1) ∪ [1,2)", "c) [-1,2)"], "correct_option": "a"}
+      ]
+    ]
+  },
+
+  "7. třída – Relace funkce": {
+    "rounds": [
+      [
+        {"text": "R = {(1,2),(2,3),(2,4)} na A={1,2}. Je R funkcí A→B?", "options": ["a) Ano", "b) Ne", "c) Jen někdy"], "correct_option": "b"},
+        {"text": "R = {(1,2),(2,3)} na A={1,2}. Je R funkcí A→B?", "options": ["a) Ano", "b) Ne", "c) Nelze rozhodnout"], "correct_option": "a"},
+        {"text": "Obor hodnot relace {(1,5),(2,5),(3,7)} je:", "options": ["a) {1,2,3}", "b) {5,7}", "c) {7}"], "correct_option": "b"},
+        {"text": "Které tvrzení o funkcích je pravdivé?", "options": ["a) Každému x ∈ A přiřadí právě jedno y", "b) Každému y ∈ B přiřadí právě jedno x", "c) Funkce je relace, kde může mít x více y"], "correct_option": "a"}
+      ]
+    ]
+  },
+
+  "8. třída – Obraz předobraz": {
+    "rounds": [
+      [
+        {"text": "Nechť f(x)=2x+1, A={1,3}. Urči f(A).", "options": ["a) {3,7}", "b) {2,6}", "c) {1,4}"], "correct_option": "a"},
+        {"text": "Nechť f(x)=x^2, A={-2,1,3}. Urči f(A).", "options": ["a) {4,1,9}", "b) {-2,1,3}", "c) {2,1,3}"], "correct_option": "a"},
+        {"text": "Nechť f(x)=2x+1, B={3,5}. Urči f^{-1}(B).", "options": ["a) {1,2}", "b) {2,3}", "c) {0,1}"], "correct_option": "a"},
+        {"text": "Nechť f(x)=x^2, B={1,9}. Urči f^{-1}(B) na Z.", "options": ["a) {-3,-1,1,3}", "b) {-3,3}", "c) {1,9}"], "correct_option": "a"}
+      ]
+    ]
+  },
+
+  "9. třída – Ekviv třídy": {
+    "rounds": [
+      [
+        {"text": "Na Z definuj ≡ mod 3. Do které třídy patří 14?", "options": ["a) [0]", "b) [1]", "c) [2]"], "correct_option": "b"},
+        {"text": "Na Z mod 5. Která množina je [2]?", "options": ["a) {...,-3,2,7,12,...}", "b) {...,-2,3,8,13,...}", "c) {...,-1,4,9,14,...}"], "correct_option": "a"},
+        {"text": "Které tvrzení je pravdivé pro ≡ mod n?", "options": ["a) Je to ekvivalence", "b) Není tranzitivní", "c) Není reflexivní"], "correct_option": "a"},
+        {"text": "Kolik tříd má relace ≡ mod 4?", "options": ["a) 2", "b) 3", "c) 4"], "correct_option": "c"}
+      ]
+    ]
+  }
 }
   
