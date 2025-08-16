@@ -10,7 +10,7 @@
           {"text": "Doplň písmeno: zám_k", "options": ["a) e", "b) o", "c) í"], "correct_option": "a"},
           {"text": "Doplň písmeno: ko_ka", "options": ["a) č", "b) n", "c) t"], "correct_option": "a"},
           {"text": "Doplň písmeno: d_mek", "options": ["a) u", "b) o", "c) a"], "correct_option": "b"},
-          {"text": "Doplň písmeno: ma_ka", "options": ["a) m", "b) t", "c) s"], "correct_option": "b"},
+          {"text": "Doplň písmeno: ma_ka", "options": ["a) l", "b) s", "c) á"], "correct_option": "b"},
           {"text": "Kolik slabik má slovo: jablko?", "options": ["a) 2", "b) 3", "c) 4"], "correct_option": "b"},
           {"text": "Kolik slabik má slovo: stůl?", "options": ["a) 1", "b) 2", "c) 3"], "correct_option": "a"},
           {"text": "Kolik slabik má slovo: hruška?", "options": ["a) 2", "b) 3", "c) 4"], "correct_option": "a"},
@@ -119,7 +119,7 @@
         [
           {"text": "Doplň: b_t (existovat)", "options": ["a) i", "b) y", "c) ý"], "correct_option": "c"},
           {"text": "Doplň: b_t (místnost k bydlení)", "options": ["a) i", "b) y", "c) ý"], "correct_option": "b"},
-          {"text": "Doplň: bydl_t (mít bydliště)", "options": ["a) i", "b) y", "c) ý"], "correct_option": "a"},
+          {"text": "Doplň: b_dlit (mít bydliště)", "options": ["a) i", "b) y", "c) ý"], "correct_option": "b"},
           {"text": "Doplň: ob_vatel města", "options": ["a) i", "b) y", "c) ý"], "correct_option": "b"},
           {"text": "Doplň: náb_tek do pokoje", "options": ["a) i", "b) y", "c) ý"], "correct_option": "b"},
           {"text": "Doplň: dob_tek na pastvě", "options": ["a) i", "b) y", "c) ý"], "correct_option": "b"},
