@@ -515,17 +515,24 @@ def cjl_gen_pick_syllable_easy(n: int = 30):
 def cjl_gen_soft_hard_dtn(n: int = 30):
     """
     MCQ: 'Slabiku „..“ ve slově „…“ čteme: a) měkce, b) tvrdě, c) obojetně'
-    Pravidlo (zjednodušené): di/ti/ni; dí/tí/ní; dě/tě/ně → měkce; dy/ty/ny; dý/tý/ný → tvrdě.
+    Pravidlo (zjednodušené): di/ti/ni; dí/tí/ní; dy/ty/ny; dý/tý/ný → tvrdě.
     """
     soft_examples = [
-        ("dí", "díky"), ("di", "divadlo"), ("dě", "děti"),("ti", "cítit"),("ti", "děti"),
-        ("ti", "ticho"), ("ti", "tisk"), ("tě", "tělo"),("dě", "na hradě"), ("tě", "v plotě"),
-        ("ní", "nízko"), ("ni", "niva"), ("ně", "někdo"),
+        ("dí", "díky"), ("di", "divadlo"), ("ti", "děti"),("ti", "cítit"),
+        ("ti", "ticho"), ("ti", "tisk"), ("dí", "díra"), ("di", "divák"),("di","hodiny"),
+        ("dí", "chodí"),("dí","budík"),("dí","budí"),("tí","fotí"),("ti","tiše!"),
+        ("ti", "tati!"),("tí","letí"),("dí","budík"), ("tí","smetí"),("tí","svítí"),
+        ("tí","kvítí"),("ti","tisíc",),("ti","štika"),("ti","čerti"),("tí","utíká")
+        ("tí","natírá"),("ní","koník"),("ni","nikdy"),("ní", "jarní"),("ni","knihy"),
+        ("tí","stíny")("ní","zvoní"),("ní","vodník"),("ní","peníze"),("ní", "kominík"),
+        ("ní", "nízko"), ("ni", "niva"), ("tí","platí"),("di","rodina")("di","divoký")
     ]
     hard_examples = [
-        ("dý", "dýka"), ("dý", "dýně"),
-        ("ty", "typ"),    ("tý", "týden"),
-        ("ny", "nylon"),  ("ný", "kamenný"),  # 'ný' – hodnotíme čtení 'n' + 'ý' jako tvrdé
+        ("dý", "dýka"), ("dý", "dýně"),("dý","dým"),("dy","tady"),("dý","dýmka"),
+        ("dy","jahody"),("ny","hodiny"),("dý","mladý"),("ty","boty"),("ty","paty"),
+        ("ty","noty"),("tý","motýli"),("ty","motyka"),("ný","líný"),("ny","sny"),("ny","dny"),
+        ("ny","rány"),("ny","ceny"),("dy","nikdy"),("ný","černý"),("ny","zvony"),("ny","bedny"),
+        ("ty", "typ"),    ("tý", "týden"), ("ný", "kamenný"), ("dy","schody"),("dy","rady")  # 'ný' – hodnotíme čtení 'n' + 'ý' jako tvrdé
     ]
     import random
     out = []
