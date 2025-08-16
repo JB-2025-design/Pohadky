@@ -418,45 +418,112 @@ def cjl_gen_pick_syllable_easy(n: int = 30):
     """Vrátí list MCQ úloh: 'Vyber správnou slabiku, která je na začátku slova …'"""
     bank = [
         ("kolo",   ["ko","lo","ka"], "a"),
-        ("domek",  ["do","da","di"], "a"),
-        ("mama",   ["ma","la","ko"], "a"),
-        ("tata",   ["ta","to","tu"], "a"),
-        ("lila",   ["li","la","lo"], "a"),
-        ("nora",   ["no","na","ne"], "a"),
-        ("pesa",   ["pe","pa","po"], "a"),
+        ("domek",  ["mek","da","do"], "c"),
+        ("máma",   ["má","la","ko"], "a"),
+        ("táta",   ["ti","to","tá"], "c"),
+        ("váza",  ["za","vá","ze"], "b"),
+        ("nora",   ["na","no","ra"], "b"),
+        ("noha",   ["po","ha","no"], "c"),
         ("ryba",   ["ry","ra","ro"], "a"),
-        ("lampa",  ["la","le","li"], "a"),
-        ("seno",   ["se","si","so"], "a"),
-        ("víla",   ["ví","vi","vá"], "a"),
-        ("drak",   ["dra","dro","dri"], "a"),
+        ("lampa",  ["lam","pa","la"], "a"),
+        ("seno",   ["no","si","se"], "c"),
+        ("víla",   ["la","vi","ví"], "c"),
+        ("drak",   ["drak","dr","ak"], "a"),
         ("okno",   ["ok","ko","no"], "a"),
-        ("koza",   ["ko","ka","ku"], "a"),
+        ("koza",   ["ko","za","ku"], "a"),
         ("voda",   ["vo","vu","va"], "a"),
+
+        ("pes",    ["pe","es","pes"], "c"),
+        ("lama",   ["la","ma","am"], "a"),
+        ("sova",   ["so","ov","va"], "a"),
+        ("díra",   ["di","dí","ra"], "b"),
+        ("město",  ["měs","st","to"], "a"),
+        ("kůň",    ["ku","ků","kůň"], "c"),
+        ("čára",   ["ča","čá","ra"], "b"),
+        ("židle",  ["žid","žd","le"], "a"),
+        ("šaty",   ["ša","šat","ty"], "a"),
+        ("husa",   ["hu","ha","su"], "a"),
+        ("med",    ["med","em","md"], "a"),
+        ("teta",   ["ta","te","to"], "b"),
+        ("luk",    ["lu","uk","luk"], "c"),
+        ("hora",   ["ho","ha","ro"], "a"),
+        ("auto",   ["au","ut","to"], "a"),
+        ("pole",   ["pol","le","po"], "c"),
+        ("řeka",   ["ře","re","řek"], "a"),
+        ("vosa",   ["vos","sa","vo"], "c"),
+        ("míč",    ["mi","míč","my"], "b"),
+        ("něco",   ["ně","ne","něc"], "a"),
+        ("tělo",   ["těl","te","tě"], "c"),
+        ("děda",   ["dě","de","da"], "a"),
+        ("pila",   ["li","la","pi"], "c"),
+        ("kára",   ["ka","ká","rá"], "b"),
+        ("mýdlo",  ["my","mý","mýd"], "c"),
+        ("brána",  ["brán","bra","brá"], "c"),
+        ("hra",    ["hra","ha","ra"], "a"),
+        ("chata",  ["cha","ha","chat"], "a"),
+        ("louka",  ["lou","lo","lu"], "a"),
+        ("moře",   ["moř","mo","ře"], "b"),
+        ("prase",  ["pra","pa","ra"], "a"),
+        ("vlak",   ["vlak","va","vl"], "a"),
+        ("krabice",["kra","ka","ra"], "a"),
+        ("sedlo",  ["se","sed","so"], "b"),
+        ("list",   ["li","list","la"], "b"),
+        ("ráno",   ["ra","rá","rý"], "b"),
+        ("sníh",   ["sni","sníh","sn"], "b"),
+        ("včela",  ["vče","vč","vci"], "a"),
+        ("křída",  ["kři","kří","kry"], "b"),
+        ("svíčka", ["svi","svíč","sv"], "b"),
+        ("klíč",   ["kli","klíč","kl"], "b"),
+        ("mléko",  ["mlé","mle","ml"], "a"),
+        ("dřevo",  ["dre","dře","dř"], "b"),
+        ("topení", ["to","te","ta"], "a"),
+        ("sáně",   ["sá","san","se"], "a"),
+        ("louže",  ["lou","lo","lu"], "a"),
+        ("koleda", ["ko","kol","le"], "a"),
+        ("květ",   ["k","květ","ky"], "b"),
+        ("mrak",   ["mrak","ma","ra"], "a"),
+        ("dívka",  ["div","dív","di"], "b"),
+        ("měkký",  ["měk","mek","mě"], "a"),
+        ("jablko", ["ja","jab","ab"], "a"),
+        ("cukr",   ["cu","cuk","kr"], "a"),
+        ("věž",    ["věž","ve","vž"], "a"),
+        ("život",  ["ži","živ","vo"], "a"),
     ]
-    out = []
+
     import random
-    for _ in range(n):
-        word, opts, corr = random.choice(bank)
-        out.append({
+    pool = bank.copy()
+    random.shuffle(pool)
+
+    # vyber bez duplicit; když chceš víc než je v bance, dober s opakováním
+    if n <= len(pool):
+        chosen = pool[:n]
+    else:
+        chosen = pool + random.choices(pool, k=n - len(pool))
+
+    tasks = []
+    for word, options, correct in chosen:
+        # options s prefixy "a) / b) / c)" pro zobrazení
+        prefixed = [f"a) {options[0]}", f"b) {options[1]}", f"c) {options[2]}"]
+        tasks.append({
             "text": f"Vyber správnou slabiku na začátku slova **{word}**:",
-            "options": [f"a) {opts[0]}", f"b) {opts[1]}", f"c) {opts[2]}"],
-            "correct_option": corr
+            "options": prefixed,
+            "correct_option": correct  # pořád "a" | "b" | "c"
         })
-    return out
+    return tasks
 
 # ---------- ČJ: generátor 'Tvrdé a měkké čtení po d, t, n' ----------
 def cjl_gen_soft_hard_dtn(n: int = 30):
     """
-    MCQ: 'Slabiku „..“ ve slově „…“ čteme: a) měkce, b) tvrdě'
+    MCQ: 'Slabiku „..“ ve slově „…“ čteme: a) měkce, b) tvrdě, c) obojetně'
     Pravidlo (zjednodušené): di/ti/ni; dí/tí/ní; dě/tě/ně → měkce; dy/ty/ny; dý/tý/ný → tvrdě.
     """
     soft_examples = [
-        ("dí", "díky"), ("di", "divadlo"), ("dě", "děti"),
-        ("tí", "ticho"), ("ti", "tisk"), ("tě", "tělo"),
+        ("dí", "díky"), ("di", "divadlo"), ("dě", "děti"),("ti", "cítit"),("ti", "děti"),
+        ("ti", "ticho"), ("ti", "tisk"), ("tě", "tělo"),("dě", "na hradě"), ("tě", "v plotě"),
         ("ní", "nízko"), ("ni", "niva"), ("ně", "někdo"),
     ]
     hard_examples = [
-        ("dy", "dynamo"), ("dý", "dýně"),
+        ("dý", "dýka"), ("dý", "dýně"),
         ("ty", "typ"),    ("tý", "týden"),
         ("ny", "nylon"),  ("ný", "kamenný"),  # 'ný' – hodnotíme čtení 'n' + 'ý' jako tvrdé
     ]
@@ -465,10 +532,10 @@ def cjl_gen_soft_hard_dtn(n: int = 30):
     for _ in range(n):
         if random.random() < 0.6:
             syl, word = random.choice(soft_examples)
-            corr = "a"; options = ["a) měkce", "b) tvrdě", "c) —"]
+            corr = "a"; options = ["a) měkce", "b) tvrdě", "c) obě možnosti"]
         else:
             syl, word = random.choice(hard_examples)
-            corr = "b"; options = ["a) měkce", "b) tvrdě", "c) —"]
+            corr = "b"; options = ["a) měkce", "b) tvrdě", "c) obě možnosti"]
         out.append({
             "text": f"Slabiku **„{syl}“** ve slově **„{word}“** čteme:",
             "options": options,
@@ -1602,6 +1669,37 @@ MA_TOPICS_BY_GRADE = {
     "8. třída": ["Mocniny a odmocniny", "Pythagorova věta", "Kruh: obvod a obsah"],
     "9. třída": ["Rovnice", "Kvadratické rovnice x²=a", "Statistika (průměr/medián)", "Procenta/finance"],
 }
+# === Témata (přidáváme „Množiny – …“) ===
+MA_TOPICS_BY_GRADE["3. třída"] += [
+    "Množiny – A∪B, A∩B, A\\B (1..20)",
+    "Venn – 2 množiny (čísla 1..20)",
+]
+MA_TOPICS_BY_GRADE["4. třída"] += [
+    "Venn – 3 množiny (2/3/5)",
+    "Kartézský součin – počty",
+]
+MA_TOPICS_BY_GRADE["5. třída"] += [
+    "Inkluze–exkluze (2–3 množ.)",
+    "Komplement, De Morgan",
+]
+MA_TOPICS_BY_GRADE["6. třída"] += [
+    "Intervaly jako množiny",
+    "Sjednocení/průnik intervalů",
+]
+MA_TOPICS_BY_GRADE["7. třída"] += [
+    "Kartézský součin – mřížka",
+    "Relace vs. funkce (A→B)",
+]
+MA_TOPICS_BY_GRADE["8. třída"] += [
+    "Obraz/předobraz množiny",
+    "Složené nerovnice – intervaly",
+]
+MA_TOPICS_BY_GRADE["9. třída"] += [
+    "Ekvivalence, třídy (mod n)",
+    "Mocnina množiny, 2^n",
+]
+
+
 
 MA_TOPIC_FORMAT = {
     "1. třída": {
@@ -1650,6 +1748,37 @@ MA_TOPIC_FORMAT = {
         "Procenta/finance": "na 2 desetinná místa (tečka NEBO čárka)",
     },
 }
+
+# === Formát odpovědi do poznámky (jen krátké doplnění) ===
+MA_TOPIC_FORMAT.setdefault("3. třída", {}).update({
+    "Množiny – A∪B, A∩B, A\\B (1..20)": "celé číslo / MCQ",
+    "Venn – 2 množiny (čísla 1..20)": "MCQ",
+})
+MA_TOPIC_FORMAT.setdefault("4. třída", {}).update({
+    "Venn – 3 množiny (2/3/5)": "MCQ",
+    "Kartézský součin – počty": "celé číslo",
+})
+MA_TOPIC_FORMAT.setdefault("5. třída", {}).update({
+    "Inkluze–exkluze (2–3 množ.)": "celé číslo",
+    "Komplement, De Morgan": "MCQ",
+})
+MA_TOPIC_FORMAT.setdefault("6. třída", {}).update({
+    "Intervaly jako množiny": "MCQ",
+    "Sjednocení/průnik intervalů": "MCQ",
+})
+MA_TOPIC_FORMAT.setdefault("7. třída", {}).update({
+    "Kartézský součin – mřížka": "celé číslo",
+    "Relace vs. funkce (A→B)": "MCQ",
+})
+MA_TOPIC_FORMAT.setdefault("8. třída", {}).update({
+    "Obraz/předobraz množiny": "MCQ",
+    "Složené nerovnice – intervaly": "MCQ",
+})
+MA_TOPIC_FORMAT.setdefault("9. třída", {}).update({
+    "Ekvivalence, třídy (mod n)": "MCQ",
+    "Mocnina množiny, 2^n": "celé číslo",
+})
+
 
 # po definici MA_TOPIC_FORMAT:
 MA_TOPIC_FORMAT["7. třída"]["Lineární rovnice (základ)"] = "číslo na 2 desetinná místa (tečka NEBO čárka)"
@@ -1857,8 +1986,7 @@ CJL_TOPICS_BY_GRADE = {
 
 cjl_notes_by_level = {
     "1. třída": [
-        "Cvičíme slabiky, doplňování písmen a měkké/tvrdé čtení po d, t, n.",
-        "Formát: výběr a/b/c (klikni na možnost)."
+        "Formát: vyber a), b) nebo c)."
     ],
     "2. třída": [
         "Po tvrdých píšeme y/ý: h, ch, k, r, d, t, n. Po měkkých píšeme i/í: ž, š, č, ř, c, j, ď, ť, ň.",
@@ -2081,6 +2209,73 @@ MA_JSON_TOPICS = {
     ("2. třída", "Sudá/lichá v množině"): "2. třída – sudá/lichá",
     ("2. třída", "Násobky 2–9 – třídění do množin"): "2. třída – násobky",
 }
+
+def generate_diploma_pdf(username, score, time_s, fairytale_title,
+                         achievement_date, level, subject_display,
+                         topic_line, image_path,
+                         crop_mode="auto"):
+    pdf = FPDF(orientation='L', unit='mm', format='A4'); pdf.add_page()
+    pw, ph = pdf.w, pdf.h
+    try:
+        pdf.add_font("DejaVuSans","", "DejaVuSansCondensed.ttf", uni=True)
+        pdf.add_font("DejaVuSans","B","DejaVuSansCondensed.ttf", uni=True)
+    except RuntimeError:
+        pdf.set_font("Arial","",24)
+
+    # pozadí – poloprůhledný obrázek s chytrým cropem
+    if image_path and os.path.exists(image_path):
+        original_img = _PILImage.open(image_path)
+        iw, ih = original_img.size
+
+        # horní půlka pro vybrané/přenastavené pohádky
+        crop_top = (
+            crop_mode == "top-half"
+            or (crop_mode == "auto" and fairytale_title in {"O Zlatovlásce", "O jednorožci a dráčkovi"})
+        )
+        if crop_top:
+            original_img = original_img.crop((0, 0, iw, ih // 2))
+            iw, ih = original_img.size
+
+        img_rgba = original_img.convert("RGBA")
+        bg = _PILImage.new("RGBA", img_rgba.size, (255, 255, 255, 255))
+        img_rgba.putalpha(128)
+        final_bg = _PILImage.alpha_composite(bg, img_rgba)
+
+        buf = io.BytesIO()
+        final_bg.convert("RGB").save(buf, format="JPEG")
+        buf.seek(0)
+
+        # zvětšit na stránku se zachováním AR
+        ar = iw / ih
+        if pw / ph > ar:
+            bw, bh = pw, pw / ar
+        else:
+            bh, bw = ph, ph * ar
+
+        # pro top-half vypadá líp nahoře, jinak centrovat
+        if crop_top:
+            x = (pw - bw) / 2; y = 0
+        else:
+            x = (pw - bw) / 2; y = (ph - bh) / 2
+
+        pdf.image(buf, x=x, y=y, w=bw, h=bh)
+
+    # titulky
+    pdf.set_font("DejaVuSans","",36)
+    pdf.set_xy(10,30); pdf.cell(0,10,'Diplom',0,1,'C')
+    pdf.set_font("DejaVuSans","",18); pdf.set_xy(10,50)
+    pdf.cell(0,10, f'Tento diplom získává za skvělý výkon ve hře Pohádky s {subject_display}', 0, 1, 'C')
+    pdf.set_font("DejaVuSans","B",48); pdf.set_xy(10,90); pdf.cell(0,10,username,0,1,'C')
+    pdf.set_font("DejaVuSans","",16); pdf.set_xy(10,120)
+    pdf.cell(0,10,f'za úspěšné vyřešení {score} úkolů v pohádce "{fairytale_title}"', 0, 1, 'C')
+    # datum z achievement_date (pokud je), jinak nyní
+    when = achievement_date.strftime("%d.%m.%Y %H:%M") if achievement_date else datetime.datetime.now().strftime("%d.%m.%Y %H:%M")
+    pdf.set_xy(10,130); pdf.cell(0,10,f'Úroveň: {level} · Čas: {time_s:.2f} s · {when}', 0, 1, 'C')
+    if topic_line:
+        pdf.set_xy(10,142); pdf.cell(0,10,f'Téma: {topic_line}', 0, 1, 'C')
+
+    return bytes(pdf.output(dest='S'))
+
 # =========================
 # Streamlit page
 # =========================
@@ -3082,13 +3277,32 @@ with col_left:
             st.snow()
             if st.session_state.end_time is None:
                 st.session_state.end_time = time.time()
+                st.session_state.achievement_date = datetime.datetime.now()
                 total = st.session_state.end_time - st.session_state.start_time
-                correct = sum(1 for *_ , status in st.session_state.history if status=="✅ správně")
+                correct = sum(1 for *_, status in st.session_state.history if status == "✅ správně")
                 incorrect = len(st.session_state.history) - correct
-                st.session_state.best_score = max(st.session_state.best_score, correct)
-                st.session_state.best_time = min(st.session_state.best_time, total)
-                st.session_state.final_report = f"**Správně:** {correct} · **Špatně:** {incorrect} · **Čas (20):** {total:.2f} s"
+
+                is_best = False
+                if correct > st.session_state.best_score:
+                    st.session_state.best_score = correct
+                    is_best = True
+                if total < st.session_state.best_time:
+                    st.session_state.best_time = total
+                    is_best = True
+
+                report = (
+                    f"#### ✨ Skvěle!\n"
+                    f"- Správně: **{correct}**\n"
+                    f"- Nesprávně: **{incorrect}**\n"
+                    f"- Čas (20 úkolů): **{total:.2f}** s\n"
+                )
+                if is_best:
+                    report += "\n**🏆 Nový osobní rekord!**"
+
+                st.session_state.final_report = report
+                st.session_state.score = st.session_state.tasks_solved_for_reveal
             st.success("Vyřešil/a jsi všech 20 úkolů!")
+
 
   
     # Historie
@@ -3101,49 +3315,54 @@ with col_left:
                 q, a_user, a_correct, status = item
                 st.markdown(f"{i}. **{q}** → tvoje: `{a_user}` | správně: `{a_correct}` — {status}")
 
-
     # Diplom
     if st.session_state.final_report:
+        # 🔧 fix: definuj db_level
+        db_level = class_to_db_level.get(vyber_tridy, vyber_tridy)
+
         st.subheader("🏆 Výsledková listina")
         st.info(st.session_state.final_report)
-        st.subheader("📜 Vytvořit diplom (PDF)")
+        st.subheader("📜 Vytvořit diplom")
         diploma_name = st.text_input("Jméno na diplom:", value="")
-        if diploma_name:
-            subject_display = {"MA":"Matematikou","ČJ":"Češtinou","IT":"Informatikou (Python)"}[subject]
-            topic_line = confirmed_topic or ""
-            total_time = (st.session_state.end_time - st.session_state.start_time) if (st.session_state.end_time and st.session_state.start_time) else 0.0
-            pdf = FPDF(orientation='L', unit='mm', format='A4'); pdf.add_page()
-            pw, ph = pdf.w, pdf.h
-            try:
-                pdf.add_font("DejaVuSans","", "DejaVuSansCondensed.ttf", uni=True)
-                pdf.add_font("DejaVuSans","B","DejaVuSansCondensed.ttf", uni=True)
-                pdf.set_font("DejaVuSans","",36)
-            except RuntimeError:
-                pdf.set_font("Arial","",36)
-            if image_path and os.path.exists(image_path):
-                img = _PILImage.open(image_path)
-                iw, ih = img.size
-                buf = io.BytesIO(); img.convert("RGB").save(buf, format="JPEG"); buf.seek(0)
-                ar = iw/ih
-                if pw/ph > ar: bw, bh = pw, pw/ar
-                else: bh, bw = ph, ph*ar
-                x, y = (pw - bw)/2, (ph - bh)/2
-                pdf.image(buf, x=x, y=y, w=bw, h=bh)
-            pdf.set_xy(10,30); pdf.cell(0,10,'Diplom',0,1,'C')
-            pdf.set_font_size(18)
-            pdf.set_xy(10,50); pdf.cell(0,10, f'Pohádky – {subject_display}', 0, 1, 'C')
-            pdf.set_font_size(48)
-            pdf.set_xy(10,85); pdf.cell(0,10, diploma_name, 0, 1, 'C')
-            pdf.set_font_size(16)
-            pdf.set_xy(10,118); pdf.cell(0,10,f'Pohádka: "{vyber}"', 0, 1, 'C')
-            pdf.set_xy(10,130); pdf.cell(0,10,f'Úroveň: {vyber_tridy}', 0, 1, 'C')
-            if topic_line:
-                pdf.set_xy(10,142); pdf.cell(0,10,f'Téma: {topic_line}', 0, 1, 'C')
-            now = datetime.datetime.now().strftime("%d.%m.%Y %H:%M")
-            pdf.set_xy(10,160); pdf.cell(0,10,f'Výsledek: {st.session_state.tasks_solved_for_reveal} úkolů · Čas: {total_time:.2f} s · {now}', 0, 1, 'C')
-            st.download_button("Stáhnout diplom PDF", data=bytes(pdf.output(dest='S')),
-                               file_name=f"diplom_{diploma_name}.pdf", mime="application/pdf")
 
+        if diploma_name and st.session_state.best_score > 0:
+            subject_display = {"MA":"Matematikou","ČJ":"Češtinou","IT":"Informatikou (Python)"}.get(subject, "")
+            topic_line = confirmed_topic or ""  # zvolené téma se propíše do PDF
+
+            pdf_bytes = generate_diploma_pdf(
+                username=diploma_name,
+                score=st.session_state.best_score,
+                time_s=st.session_state.best_time,
+                fairytale_title=vyber,
+                achievement_date=st.session_state.achievement_date,
+                level=db_level,
+                subject_display=subject_display,
+                topic_line=topic_line,
+                image_path=st.session_state.diploma_image_path,
+                crop_mode="auto",
+            )
+            st.download_button("Stáhnout diplom PDF", data=pdf_bytes,
+                            file_name=f"diplom_{diploma_name}.pdf", mime="application/pdf")
+            
+    if st.session_state.game_started and st.session_state.tasks_solved_for_reveal >= TASKS_TO_REVEAL:
+        if st.button("Začít novou hru", key="restart_game_final"):
+            ss = st.session_state
+            ss.game_started = False
+            ss.tasks_solved_for_reveal = 0
+            ss.start_time = None
+            ss.end_time = None
+            ss.current_task = None
+            ss.current_cjl_task = None
+            ss.history = []
+            ss.feedback_message = ""
+            ss.feedback_type = ""
+            ss.final_report = None
+            ss.revealed_tiles = [False] * TASKS_TO_REVEAL
+            ss.tile_coords = []
+            # best_score, best_time, achievement_date nechávám – jsou to „osobní rekordy“
+            st.rerun()
+
+    
 with col_right:
     st.subheader("🖼️ Obrázek")
     if image_path and os.path.exists(image_path):
@@ -3171,3 +3390,4 @@ st.markdown("---")
 st.subheader("⭐ Mravní ponaučení")
 if moral: st.info(moral)
 else:     st.warning("Ponaučení není zadáno.")
+
