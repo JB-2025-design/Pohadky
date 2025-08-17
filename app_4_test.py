@@ -2539,7 +2539,7 @@ def generate_diploma_pdf(username, score, time_s, fairytale_title,
         # horní půlka pro vybrané/přenastavené pohádky
         crop_top = (
             crop_mode == "top-half"
-            or (crop_mode == "auto" and fairytale_title in {"O Zlatovlásce", "O jednorožci a dráčkovi"})
+            or (crop_mode == "auto" and fairytale_title in {"Odysseus a Sirény", "Sisyfos","Theseus a Minotaurus", "Persefona a Hádes", "O Zlatovlásce", "O jednorožci a dráčkovi","Python","Orfeus a Eurydika" })
         )
         if crop_top:
             original_img = original_img.crop((0, 0, iw, ih // 2))
