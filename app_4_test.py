@@ -1578,62 +1578,56 @@ fairytales_data = {
 # --- Mýty pro 6.–9. třídu (oddělený katalog) ---
 # --- Mýty pro 6.–9. třídu (oddělený katalog) ---
 myths_data = {
+    "Python": {
+        "text":"Na úpatí hory Parnas, nedaleko města Delfy, žilo strašlivé prastaré monstrum – obrovský had jménem Python. Podle pověsti se zrodil z hlíny, kterou zanechal potopou očištěný svět, nebo byl potomkem samotné země, bohyně Gaie. Python střežil posvátné místo, kde z útrob země vyvěraly tajemné výpary, a kde lidé cítili, že se mohou dotknout hlasu bohů. Když se bohyně Létó měla stát matkou Apollóna a Artemidy, žárlivá Héra proti ní poslala právě tohoto hada. Python měl zabránit, aby Létó našla bezpečné místo k porodu. Létó však božskou ochranou nakonec porodila dvojčata – a její syn Apollón se rozhodl matčinu křivdu pomstít. Ještě jako mladý bůh si Apollón vzal luk a stříbrné šípy a vydal se proti Pythonovi. Strhla se veliká bitva, v níž se had svíjel a syčel kolem Parnasu. Apollón jej nakonec prostřílel svými šípy a Python padl mrtev u pramene Kastalské studny. Na památku svého vítězství založil Apollón v Delfách věštírnu, kde kněžka Pýthie sedávala na trojnožce a pronášela tajemné věštby. Samotný název „Pýthie“ a „pythijské hry“ odkazuje právě na poraženého Pythona.", 
+        "moral":"Apollónovo vítězství nad Pythonem symbolizuje vítězství řádu, světla a umění nad chaosem a temnotou. Python, stvořený ze země, představuje sílu přírody a pradávného, instinktivního světa. Apollón, bůh hudby, poezie a věšteb, na jeho místě zakládá centrum řecké spirituality – delfskou věštírnu.",
+        "obrazek_path":"python.png"
+
+        },
     "Dafné": {
         "text": "Kdysi dávno, v době, kdy na světě ještě kráčeli bohové, žila krásná dívka jménem Dafné. Byla dcerou boha řeky Peneia a celé dny trávila v lesích, kde sbírala byliny a lovila zvěř. Měla ráda svobodu a klid, a proto se chtěla vyhnout všem nápadníkům. Jednoho dne se však stalo něco zvláštního. Bůh Apollón, ochránce hudby, poezie a světla, se dostal do sporu s bohem lásky, malým okřídleným Erotem. Apollón se mu posmíval, že jeho luk a šípy jsou jen pro děti. Erot se rozhodl ukázat, jak mocná jeho zbraň je. Vystřelil dva šípy: Zlatý šíp lásky zasáhl Apollóna – ten se okamžitě zamiloval do první dívky, kterou uviděl: byla to právě Dafné. Olovený šíp odporu zasáhl Dafné – od té chvíle cítila k Apollónovi jen strach a nechuť. Apollón běžel za ní, volal na ni slova lásky a sliboval jí všechno možné, ale Dafné utíkala stále dál. Běžela lesem, přes potoky a louky, dokud nemohla dál. Cítila, že ji Apollón skoro chytá. V zoufalství zavolala na svého otce, boha řeky: „Otče, pomoz mi! Změň mou podobu, ať už mě nemůže nikdy chytit!“ V tu chvíli začaly Dafné nohy těžknout a měnit se v kořeny, její ruce se proměnily v větve a prsty v listy. Její tělo se pokrylo kůrou a v mžiku se z ní stal vavřínový strom. Apollón k ní doběhl a objal její kmen. Bylo mu smutno, ale přísahal, že ji nikdy nezapomene. Vavřínové listy se pro něj staly symbolem slávy a vítězství – z nich se pletly věnce pro básníky a vítěze sportovních her.",
         "moral":"Příběh ukazuje, že ne každý cit musí být opětován a že svoboda je pro některé cennější než sláva. Mýtus vysvětluje původ vavřínu jako symbolu vítězství a slávy v řecké kultuře.",
         "obrazek_path": "dafne_apolon.png"
         },
     "Prométheus": {
-        "text": """Prométheus lidem přinesl oheň – schopnost tvořit, poznávat a měnit svět.
-        Za dar poznání zaplatil trestem, protože překročil hranici vymezenou bohy.
-        Mýtus klade otázku po ceně svobody a odpovědnosti za poznání.""",
-        "moral": "Poznání je dar i závazek: kdo víc ví, nese víc odpovědnosti.",
-        "obrazek_path": "myty/prometheus"
+        "text": "Na počátku časů, když bohové vládli z hory Olymp, žili lidé ještě v temnotě a nevědomosti. Neměli oheň, neuměli tvořit nástroje, jejich život byl chladný a plný strachu. Prométheus, „ten, který myslí dopředu“, byl z rodu Titánů. Měl lidstvo rád a chtěl jim pomoci. Viděl, jak lidé hladoví a třesou se zimou, zatímco bohové v přepychu hodují na Olympu. Rozhodl se tedy, že lidem přinese dar, který jim dá sílu a vědění – oheň. Tajně se vypravil na Olymp, přiblížil se k vozu boha Hélia a do dutého stébla rákosu ukryl jiskru slunečního ohně. Tuto jiskru pak donesl lidem na zem. Od té chvíle se vše změnilo: lidé se naučili vařit jídlo, kovat nástroje i zbraně, stavět domy a chránit se před divou zvěří. Stali se svobodnějšími a silnějšími. Když to však zjistil vládce bohů Zeus, rozhněval se. Nechtěl, aby lidé byli příliš mocní a nezávislí. Rozhodl se Prométhea potrestat. Nechal jej přikovat k hoře Kavkaz. Tam měl Prométheus trpět strašlivý úděl: každý den k němu přilétal obrovský orel, který mu kloval do jater. Protože byl Prométheus nesmrtelný, játra mu v noci vždy dorostla – a druhý den muka začínala znovu. Tak trpěl dlouhá staletí, až ho nakonec vysvobodil hrdina Héraklés, když přilétajícího orla skolil šípem a Prométhea osvobodil z pout.",
+        "moral": "Prométheus je symbolem odvahy a oběti pro dobro lidstva. Oheň, který přinesl, představuje poznání, techniku, umění a civilizaci. Jeho trest ukazuje, že mocní se často bojí, když lidé získávají přílišnou sílu a svobodu.Poznání je dar i závazek: kdo víc ví, nese víc odpovědnosti.",
+        "obrazek_path": "prometheus.png"
     },
     "Ikaros": {
-        "text": """Daidalos postavil křídla z peří a vosku. Syn Ikaros letěl příliš vysoko – slunce roztavilo vosk a spadl do moře.
-        Mýtus varuje před pýchou i slepým ignorováním zkušenosti starších.""",
-        "moral": "Ambice jsou dobré, ale míra a pokora drží člověka v bezpečí.",
-        "obrazek_path": "myty/ikaros"
+        "text": "Kdysi dávno žil na Krétě slavný vynálezce a stavitel Daidalos. Byl to muž, který uměl vyrobit téměř cokoli – stroje, sochy, i spletité stavby. Právě on postavil pro krále Mínóa slavný Labyrint, v němž byl uvězněn netvor Minotaurus. Když však Daidalos pomohl Athénskému hrdinovi Théseovi z Labyrintu uprchnout, král se rozhněval. Daidala i jeho syna Ikara nechal uvěznit na ostrově Kréta, aby nemohli vyzradit tajemství Labyrintu. Daidalos se nechtěl smířit s vězením. Přemýšlel, jak uprchnout. Moře střežily lodě, ale nebe zůstalo volné. Vynalezl tedy něco, co lidé nikdy neměli – křídla. Sestrojil je z ptačích per, která připevnil voskem na dřevěnou kostru. Pro sebe i pro Ikara vyrobil stejná křídla. Než vzlétli, varoval syna: „Leť se mnou, Ikarie, a drž se uprostřed cesty. Nesmíš letět příliš nízko, jinak tě pohltí vlhkost moře. A nesmíš stoupat příliš vysoko, jinak žár slunce roztaví vosk, který drží tvá křídla pohromadě.“ Společně se vznesli k obloze a letěli nad mořem. Lidé dole je považovali za bohy. Ikaros byl opojen svobodou. Cítil se jako pták – nebo snad jako bůh. A zapomněl na otcovu radu. Začal stoupat výš a výš, stále blíž ke slunci. Žár se opřel do jeho křídel a vosk začal měknout a kapat. Pera se rozpadla, křídla se zlomila – a Ikaros padal. Zřítil se do moře, které se od té doby nazývá Ikarovo. Daidalos, zlomený žalem, ale stále živý, doletěl až do Sicílie, kde našel útočiště.",
+        "moral": "Ikaros symbolizuje mladistvou pýchu a lehkomyslnost, touhu dosáhnout víc, než je dovoleno. Daidalos je obrazem rozumu a zkušenosti, který však někdy nedokáže uchránit před unáhleností. Příběh varuje před tím, jak snadno může svoboda přejít v hybris – přehnanou pýchu, která přináší pád.",
+        "obrazek_path": "ikaros.png"
     },
     "Orfeus a Eurydika": {
-        "text": """Orfeus sestoupil do podsvětí pro svou milovanou Eurydiku.
-        Vyprosil si ji hudbou, ale porušil poslední podmínku – ohlédl se – a Eurydiku ztratil.
-        Mýtus mluví o síle umění i křehkosti důvěry.""",
-        "moral": "Láska a důvěra potřebují vytrvalost: jeden okamžik netrpělivosti může všechno zmařit.",
-        
-        "obrazek_path": "myty/orfeus_eurydika"
+        "text": "Orfeus byl syn boha Apollóna a múzy Kalliopé. Už od malička měl dar hudby – když hrál na svou lyru a zpíval, zastavil vítr, utišil rozbouřenou řeku a i divoká zvířata ho poslouchala. Jeho písně byly tak krásné, že dokázaly obměkčit i nejtvrdší srdce. Orfeus se zamiloval do krásné dívky Eurydiky. Byla to čistá a něžná láska, a tak se vzali. Jejich štěstí však netrvalo dlouho. Jednoho dne, když Eurydika běžela loukou, šlápla na hada, ten ji uštknul a ona zemřela. Orfeus byl zoufalý. Nedokázal se smířit s tím, že navždy ztratil svou milovanou. Rozhodl se udělat něco, co ještě žádný smrtelník nezkusil – sestoupit do podsvětí a přivést ji zpět. Podsvětí vládl Hádés se svou manželkou Persefonou. Nikdo, kdo jednou překročil hranici, se nevracel zpátky. Ale Orfeus šel s odhodláním a s lyrou v ruce. Hrál a zpíval tak krásně, že i stíny mrtvých se zastavily, aby naslouchaly, a netvor Kerberos, trojhlavý pes, přestal štěkat a ulehl k jeho nohám. Když se Orfeus dostal k Hádu a Persefoně, zahrál píseň tak smutnou, že i srdce boha mrtvých bylo dojaté. Hádés řekl: „Dobře, Orfee, dovolím ti odvést Eurydiku zpět na svět živých. Ale je tu podmínka – půjde za tebou a ty se nesmíš ani jednou otočit, dokud nevyjde na denní světlo. Pokud se otočíš, ztratíš ji navždy.“ Orfeus vyrazil. Cítil, jak jeho milovaná kráčí za ním – slyšel její kroky, vnímal její přítomnost, ale nemohl ji vidět. Stoupali vzhůru tmavými chodbami podsvětí. Jen pár kroků chybělo k východu. V Orfeovi ale zvítězila pochybnost – co když tam opravdu není? Co když jej Hádés oklamal? V tu chvíli se otočil. A spatřil Eurydiku, jak se na něj smutně usmívá, než zmizí zpět do říše mrtvých – tentokrát navždy. Orfeus zůstal sám, naplněný žalem. Putoval světem, ale jeho písně už nebyly radostné – byly smutné a teskné. Nakonec byl roztrhán rozvášněnými Ménadami, služebnicemi boha Dionýsa. Jeho duše však sestoupila do podsvětí a tam se znovu setkala s Eurydikou. Od té chvíle už byli navždy spolu.",
+        "moral": "Láska a důvěra potřebují vytrvalost: jeden okamžik netrpělivosti může všechno zmařit. Láska je silná, ale vyžaduje důvěru – pochybnost může zničit i ten největší dar. Umění má moc obměkčit i to nejtvrdší srdce – Orfeova hudba otevřela brány podsvětí. Některé ztráty jsou nevratné – příběh učí, že smrt patří k lidskému osudu. Naděje a smutek se prolínají – Orfeův příběh je zároveň tragický i krásný, protože ukazuje hloubku lidské lásky.",
+        "obrazek_path": "orfeus.png"
     },
     "Persefona a Hádes": {
-        "text": """Persefona tráví část roku v podsvětí a část na zemi – střídání ročních období. Mýtus učí přijmout cykly ztráty a návratu, tmy a světla.""",
-        "moral": "Život má své rytmy: místo boje s nimi hledej, jak v nich moudře žít.",
-        "obrazek_path": "myty/persefona"
+        "text": "Persefona byla krásná dívka, dcera nejvyšší bohyně plodnosti a úrody, Démétry, a vládce bohů, Dia. Vyrůstala na loukách a v zahradách, obklopená květinami a světlem. Kdekoliv šla, tam rozkvetly stromy a tráva se zazelenala. Jednoho dne, když Persefona s přítelkyněmi sbírala květiny na louce, spatřila zvláštní narcis, který byl nádhernější než všechny ostatní. Když jej utrhla, rozevřela se země a z hlubin vyjel Hádés, vládce podsvětí, v černém voze taženém ohnivými koňmi. Persefonu unesl a odvezl ji do své říše mrtvých, aby se stala jeho manželkou a královnou. Démétér hledala svou dceru po celém světě. Toulala se dnem i nocí, dokud se nedozvěděla pravdu – že ji odnesl Hádés. Zoufalství ji ochromilo. Přestala pečovat o pole a zahrady, úroda vyschla, stromy přestaly rodit a na zemi přišel hladomor. Lidé začali umírat a svět se ponořil do bídy. Nakonec musel zasáhnout samotný Zeus. Nechtěl, aby lidstvo zahynulo, a proto poslal posla Hermése, aby přinesl zprávu Hádovi: musí Persefonu propustit. Hádés nechtěl přijít o svou manželku. Nabídl Persefoně jídlo – a ona, aniž tušila následky, snědla několik zrníček granátového jablka. V podsvětí platilo přísné pravidlo: kdo tam okusí jídlo, nemůže odejít navždy. Proto byl uzavřen kompromis: Persefona bude část roku u své matky na zemi a část roku v podsvětí s Hádém. Když je Persefona na zemi, Démétér se raduje a svět je plný života – nastává jaro a léto. Když však musí sestoupit k Hádovi, Démétér se zarmoutí, příroda usíná a přichází podzim a zima.Mýtus učí přijmout cykly ztráty a návratu, tmy a světla.",
+        "moral": "Život má své rytmy: místo boje s nimi hledej, jak v nich moudře žít. Život je koloběh – po období hojnosti přichází útlum a smutek, ale po zimě vždy znovu přichází jaro. Každá radost má svou cenu – Persefona má dvě podoby života, stejně jako člověk zakouší světlo i temnotu. Matčina láska je mocná – Démétrin zármutek otřásl světem i bohy. Úmluva a rovnováha – mýtus ukazuje, že i bohové musejí hledat kompromisy, aby svět fungoval.",
+        "obrazek_path": "persefona.png"
     },
     "Sisyfos": {
-        "text": """Sisyfos věčně valí kámen do kopce a ten se vždy skutálí zpět.
-        Mýtus provokuje otázkou smyslu námahy a každodenní vytrvalosti.""",
+        "text": "Kdysi dávno vládl v Řecku chytrý a prohnaný král jménem Sisyfos (někdy psán Sisyphos). Byl to král města Korintu, slavný svou vynalézavostí, ale ještě více svou vychytralostí a klamem. Sisyfos byl známý tím, že dokázal přelstít kohokoli – lidi i bohy. Zrazoval cizince, porušoval přísahy a prodával tajemství olympských bohů. Jednou dokonce prozradil řekům, že bůh Zeus unesl nymfu Aigínu. Bohové mu to nemohli zapomenout. Když se jeho čas naplnil, poslal Zeus boha smrti Thanata, aby Sisyfa odvedl do podsvětí. Jenže Sisyfos nebyl snadná kořist. Podařilo se mu Thanata přelstít a dokonce jej spoutal řetězy. Smrt přestala fungovat – lidé přestali umírat a na zemi vznikl zmatek. Bohové byli rozhořčeni, protože narušený řád vesmíru hrozil zničit svět. Nakonec musel zasáhnout bůh války Áres, který Thanata vysvobodil a Sisyfa odvedl do podsvětí. Ani tam se Sisyfos nesmířil se svým osudem. Než zemřel, přikázal své ženě Mérope, aby neprovedla řádný pohřební rituál. V podsvětí si pak stěžoval bohyni Persefoně, že jeho žena neprojevila patřičnou úctu, a vyprosil si povolení vrátit se na zem, aby ji potrestal. Jakmile se však vrátil, znovu začal žít jako král a odmítal odejít zpět. Teprve po dlouhé době jej bohové násilím přinutili vrátit se do říše mrtvých. Tentokrát už mu neodpustili. Zeus a Hádés rozhodli, že Sisyfos dostane trest, který nikdy neskončí. Musel valit obrovský kámen do strmého kopce. Jenže pokaždé, když se dostal téměř na vrchol, kámen se mu vytrhl a skutálel zpět dolů. A tak Sisyfos začínal svůj úkol znovu a znovu – navěky, bez naděje na úspěch.",
         "moral": "Smysl často nevzniká výsledkem, ale postojem k práci samotné.",
-                "obrazek_path": "myty/sisyfos"
+        "obrazek_path": "sisyfos.png"
     },
     "Odysseus a Sirény": {
-        "text": """Odysseus chtěl slyšet zpěv Sirén, ale nechal se připoutat ke stěžni a posádce zacpal uši voskem.
-Touhu po poznání spojil s disciplínou – a přežil.""",
-        "moral": "Moudrost = touha + pravidla hry. Vytvoř si rámec, který tě ochrání před vlastní slabostí.",
-        
-        "obrazek_path": "myty/odysseus_sireny"
+        "text": "Po skončení trojské války se hrdina Odysseus vracel se svými druhy na rodný ostrov Ithaku. Jeho cesta byla však plná nebezpečí a zkoušek. Jedna z nejstrašnějších pastí čekala na širém moři – zpěv Sirén. Sirény byly bytosti s ženskými hlasy, krásné a neodolatelné, ale jejich těla byla napůl ptačí. Žily na ostrově obklopeném skalisky a víry. Každý, kdo uslyšel jejich zpěv, byl okouzlen, zapomněl na vše, a plul za hlasem, až jeho loď ztroskotala o skály. Odysseus o tomto nebezpečí věděl – varovala ho kouzelnice Kirké. Poradil se s družinou a vymyslel plán. Když se jejich loď blížila k ostrovu Sirén, Odysseus přikázal námořníkům, aby si ucpali uši včelím voskem. Sám však toužil slyšet zpěv těchto bytostí, aby poznal jejich moc – a přesto přežil. Proto nařídil, aby jej pevně přivázali ke stěžni a nepovolovali pouta, i kdyby je prosil. Jakmile se přiblížili, Sirény začaly zpívat. Jejich hlas byl sladký a svůdný: slibovaly Odysseovi poznání všech tajemství světa a slávu, pokud k nim připluje. Odysseus se zmítal v provazech, volal na muže, aby jej odvázali a zamířili k ostrovu. Ale námořníci, se zakrytýma ušima, neslyšeli nic a pokračovali v plavbě. Sirény křičely a zpívaly, ale loď už byla mimo jejich dosah. Tak Odysseus přežil tuto zkoušku – jediný smrtelník, který slyšel zpěv Sirén a nezahynul.", 
+        "moral": "Sirény představují svody, které lákají člověka k zkáze pod rouškou krásy a slibů. Odysseus zosobňuje moudrost a schopnost předvídat: věděl, že lidská vůle je slabá, proto se nechal připoutat, aby se ochránil před vlastní touhou. Mýtus ukazuje, že někdy se člověk musí omezit a přijmout hranice, aby se zachránil.",
+        "obrazek_path": "sireny.png"
     },
     "Perseus a Medúza": {
-        "text": """Perseus porazil Medúzu díky darům bohů a chytrému triku – díval se do štítu jako do zrcadla.
-        Mýtus ukazuje, že chytrost a spolupráce porazí i děs.""",
-        "moral": "Síla bez rozumu nestačí; připravenost a pomoc druhých rozhodují.",
-        "obrazek_path": "myty/perseus"
+        "text": "Kdysi dávno žila trojice strašlivých sester Gorgon – Sthenó, Euryalé a Medúza. Jen jedna z nich, Medúza, byla smrtelná. Její krása byla tak veliká, že podle některých pověstí dokonce přilákala Poseidona do chrámu bohyně Athény. Tímto znesvěcením se Athéna rozhněvala a Medúzu potrestala: proměnila její nádherné vlasy v jedovaté hady a její pohled v kletbu – kdokoli se jí podíval do očí, zkameněl. Král Polydektés toužil po krásné Danai, matce hrdiny Persea, a chtěl se Perseuse zbavit. Přikázal mu, aby přinesl hlavu Medúzy – úkol, který se zdál nemožný. Perseovi se však dostalo pomoci od bohů. Hermés mu daroval křídlaté sandály, aby mohl létat, a kouzelný meč. Athéna mu poskytla lesklý bronzový štít, v němž se zrcadlil obraz, takže se na Medúzu nemusel dívat přímo. Od nymf získal ještě přilbu neviditelnosti a kouzelnou brašnu (kibisis), v níž mohl hlavu bezpečně ukrýt. Vydal se tedy do sídla Gorgon, kde spaly mezi zkamenělými oběťmi. Perseus postupoval opatrně, kráčel pozpátku a díval se jen do štítu jako do zrcadla. Přiblížil se k Medúze a jediným rozhodným úderem jí usekl hlavu. V tu chvíli se z její krve zrodil okřídlený kůň Pegasos a bojovník Chrysaór. Perseus pak vložil hlavu do brašny a s pomocí božských darů unikl rozzuřeným nesmrtelným sestrám. Cestou domů zažil ještě mnoho dobrodružství – například zachránil princeznu Andromedu, kterou měl pohltit mořský netvor. Nakonec se vrátil a ukázal hlavu Medúzy Polydektovi a jeho dvořanům – ti se proměnili v kámen.",         "moral": "Síla bez rozumu nestačí; připravenost a pomoc druhých rozhodují.",      
+        "moral": "Perseus představuje odvahu, ale také moudrost a opatrnost – zvítězil ne silou, ale díky darům bohů a schopnosti použít je chytře. Medúza je symbolem nebezpečné, ničivé krásy i trestu bohů. Její hlava se stala ochranou: Athéna ji umístila na svůj štít, aby odrážela zlo.",
+        "obrazek_path": "meduza.png"
     },
     "Theseus a Minotaurus": {
-        "text": """Theseus s pomocí Ariadniny nitě prošel labyrintem a porazil Minotaura.
-Nit je symbolem plánu, který tě vede z chaosu ven.""",
-        "moral": "Velké problémy potřebují mapu a nit: plán, kontrolní body a zpětnou cestu.",
-        
-        "obrazek_path": "myty/theseus_minotaurus"
+        "text": "Kdysi dávno vládl na ostrově Kréta mocný král Mínós. V jeho paláci se ukrývalo děsivé tajemství: netvor jménem Minotaurus – napůl člověk, napůl býk. Tento tvor se zrodil jako trest bohů, a aby jej mohl Mínós ukrývat, nechal od vynálezce Daidala postavit obrovský Labyrint, z něhož nebylo úniku. Každých devět let musela Athény, které Mínós přemohl ve válce, posílat na Krétu hroznou daň: sedm chlapců a sedm dívek, kteří byli v Labyrintu obětováni Minotaurovi. Když přišel čas třetí oběti, rozhodl se mladý hrdina Théseus, syn athénského krále Aigea, že tuto hanbu ukončí. Přihlásil se mezi obětované a vyplul na Krétu s pevnou vůlí Minotaura zabít. Na Krétě se do něj zamilovala Ariadna, dcera krále Mínóa. Bylo jí líto mladého hrdiny a rozhodla se mu pomoci. Darovala mu klubko nití, které mu měl poskytnout Daidalos. „Přivaž ho ke vchodu Labyrintu,“ řekla, „a odvíjej. Až budeš vycházet, půjdeš zpátky po niti.“ Théseus se vydal do temného Labyrintu. Nit odvíjel krok za krokem, až dorazil do samého středu, kde čekal Minotaurus. Strhla se strašlivá bitva – polobýk útočil s nelidskou silou, ale Théseus byl rychlý, obratný a odvážný. Nakonec se mu podařilo netvora skoliti a zabít. Podle niti se pak vrátil zpět a spolu s ostatními Athéňany uprchl z Labyrintu. Na lodi odvezl Ariadnu s sebou, ale jejich příběh měl další složitý vývoj. Do Athén se však vrátil jako hrdina, který ukončil krvavou daň a zachránil své město.",
+        "moral": "Minotaurus symbolizuje nelidské vášně a temné síly, které člověka ohrožují. Labyrint představuje zmatek a nebezpečí života – bez rozumu a vedení bychom v něm bloudili. Théseus je hrdina, který se odváží čelit zlu, a díky odvaze i pomoci druhých (Ariadna, Daidalos) zvítězí. Ariadnina nit se stala symbolem moudrosti a cesty ven z nesnází, vedení, které umožňuje překonat chaos.",
+        "obrazek_path": "theseus.png"
     }
 }
 
@@ -1861,17 +1855,218 @@ MA_TOPIC_HINTS = {
     },
 }
 
-it_notes_by_level = {
-    "1. třída": ["Tisk textu a čísel pomocí print."],
-    "2. třída": ["Spojování textu a práce s délkou textu."],
-    "3. třída": ["Celé dělení // a zbytek %; pozdrav."],
-    "4. třída": ["Podmínka (if/else), round, porovnání."],
-    "5. třída": ["Seznamy: délka, poslední prvek, součet."],
-    "6. třída": ["Desetinná čísla (2 dp) a procenta."],
-    "7. třída": ["Celá čísla, funkce, // a %."],
-    "8. třída": ["Mocniny, odmocniny, Pythagoras, obvod kruhu."],
-    "9. třída": ["Průměr a medián, spojování slov do věty."]
+# === IT témata do selectboxu (jen UI popisy; úlohy se berou podle ročníku) ===
+# můžeš si je kdykoli změnit – na logiku úloh to nemá vliv
+IT_TOPICS_BY_GRADE = {
+    "1. třída": ["Chůze po špičkách", "Posbírej 3 jahody"],
+    "2. třída": ["Chůze + překážky", "Sběr ikon + pořadí"],
+    "3. třída": ["Delší trasy + cyklus", "Jednoduché bludiště"],
+    "4. třída": ["Optimalizace kroků", "Check-pointy a klíče"],
+    "5. třída": ["Vzory a perioda", "Skládání slov (pořadí)"],
+    # 6.–9. můžeš nechat prázdné (fallback níže) nebo si je pojmenuj:
+    "6. třída": ["Základy: print / + / *", "Text + délka", "Celá čísla, //, %"],
+    "7. třída": ["Podmínky if/else", "Seznamy: len/sum/[-1]", "Funkce (def)"],
+    "8. třída": ["Mocniny/odmocniny", "Pythagoras", "Obvod kruhu (2 dp)"],
+    "9. třída": ["Průměr/medián (2 dp)", "Posloupnosti (aₙ)", "Sestav větu ze slov"],
 }
+
+# -----------------------
+# Poznámky k učivu (IT) – hlavní téma NAHOŘE + vzorový kód
+# -----------------------
+it_notes_by_level = {
+    "1. třída": [
+        "Tisk textu a čísel pomocí příkazu print. (Navazuje na ČJ: čtení krátkých slov a vět; MA: malé počty.)",
+        "Příklad – text:\n```python\nprint('Ahoj')\nprint(\"Drak\")\n```",
+        "Příklad – čísla:\n```python\nprint(2+3)\nprint(3*4)\n```"
+    ],
+    "2. třída": [
+        "Spojování textu a práce s délkou textu. (Navazuje na ČJ: slova a písmena.)",
+        "Příklad – věta s mezerou:\n```python\nprint('Ahoj světe')\n```",
+        "Příklad – délka slova:\n```python\nprint(len('pohádka'))  # vytiskne 7\n```",
+        "Příklad – poslední písmeno:\n```python\ns = 'víla'\nprint(s[-1])  # vytiskne a\n```"
+    ],
+    "3. třída": [
+        "Celé dělení // a zbytek %; poslední znak řetězce. (Navazuje na MA: dělení se zbytkem; ČJ: práce s písmeny.)",
+        "Příklad – celočíselné dělení a zbytek:\n```python\nprint(10//3)  # 3\nprint(10%3)   # 1\n```",
+        "Příklad – poslední písmeno:\n```python\ns = 'drak'\nprint(s[-1])  # k\n```"
+    ],
+    "4. třída": [
+        "Podmínka (if/else), zaokrouhlení pomocí round, porovnání. (Navazuje na MA: zaokrouhlování, porovnávání.)",
+        "Příklad – podmínka:\n```python\na = 5\nprint('ano' if a > 3 else 'ne')\n```",
+        "Příklad – zaokrouhlení na 2 desetinná místa:\n```python\nprint(round(3.14159, 2))  # 3.14\n```",
+        "Příklad – porovnání:\n```python\nprint(7 > 4)  # True\n```"
+    ],
+    "5. třída": [
+        "Tisk a práce se seznamem: délka, poslední prvek, součet prvků. (Navazuje na MA: sčítání více čísel.)",
+        "Příklad – délka seznamu:\n```python\nL = [1, 2, 3]\nprint(len(L))  # 3\n```",
+        "Příklad – poslední prvek seznamu:\n```python\nL = [3, 6, 9]\nprint(L[-1])  # 9\n```",
+        "Příklad – součet prvků seznamu cyklem:\n```python\nL = [4, 5, 9]\ns = 0\nfor x in L:\n    s += x\nprint(s)  # 18\n```"
+    ],
+    "6. třída": [
+        "Desetinná čísla (2 desetinná místa) a procenta. (Navazuje na MA: procenta a desetinná čísla.)",
+        "Příklad – 2 desetinná místa:\n```python\nprint(f\"{10/4:.2f}\")  # 2.50\n```",
+        "Příklad – procenta:\n```python\ntotal = 200\np = 15\nprint(f\"{total*p/100:.2f}\")  # 30.00\n```"
+    ],
+    "7. třída": [
+        "Celá čísla (i záporná), vlastní funkce, // a % se zápornými. (Navazuje na MA: celá čísla, jednoduché funkce v IT.)",
+        "Příklad – sčítání se zápornými:\n```python\nprint(-3 + 5)  # 2\n```",
+        "Příklad – funkce:\n```python\ndef dvojnasobek(x):\n    return x*2\nprint(dvojnasobek(6))  # 12\n```",
+        "Příklad – dělení a zbytek se zápornými:\n```python\nprint(-11//4)\nprint(-11%4)\n```"
+    ],
+    "8. třída": [
+        "Mocniny, odmocniny, Pythagoras, obvod kruhu. (Navazuje na MA: mocniny/odmocniny, geometrie.)",
+        "Příklad – mocnina a odmocnina:\n```python\nprint(7**2)\nprint(49**0.5)\n```",
+        "Příklad – Pythagoras (3,4,5):\n```python\na = 3; b = 4\nprint((a*a + b*b) ** 0.5)  # 5.0\n```",
+        "Příklad – obvod kruhu r=5 (π≈3.14):\n```python\nr = 5\nprint(f\"{2*3.14*r:.2f}\")\n```"
+    ],
+    "9. třída": [
+        "Průměr a medián seznamu, spojování slov do věty. (Navazuje na MA: statistika; ČJ: větná stavba.)",
+        "Příklad – průměr (2 dp):\n```python\nL = [2, 4, 6]\nprint(f\"{sum(L)/len(L):.2f}\")  # 4.00\n```",
+        "Příklad – medián u sudého počtu:\n```python\nL = [1, 4, 7, 8]\nm = (L[1] + L[2]) / 2\nprint(f\"{m:.2f}\")  # 5.50\n```",
+        "Příklad – spojování slov do věty:\n```python\nslova = ['Učíme', 'se', 'Python']\nprint(' '.join(slova))\n```"
+    ],
+}
+
+# === Poznámky pro IT podle TÉMAT (6.–9. třída) ===
+IT_TOPIC_NOTES = {
+    "6. třída": {
+        # z 1. třídy (print, +, *)
+        "Základy: print / + / *": [
+            "Tisk textu a čísel pomocí `print`.",
+            "Příklad – text:\n```python\nprint('Ahoj')\nprint(\"Drak\")\n```",
+            "Příklad – čísla:\n```python\nprint(2+3)\nprint(3*4)\n```"
+        ],
+        # z 2. třídy (len, indexace)
+        "Text + délka": [
+            "Spojování textu a práce s délkou textu (`len`).",
+            "Příklad – věta s mezerou:\n```python\nprint('Ahoj světe')\n```",
+            "Příklad – délka slova:\n```python\nprint(len('pohádka'))  # 7\n```",
+            "Příklad – poslední písmeno:\n```python\ns = 'víla'\nprint(s[-1])  # a\n```"
+        ],
+        # z 3. třídy (//, %)
+        "Celá čísla, //, %": [
+            "Celočíselné dělení `//` a zbytek `%`.",
+            "Příklad:\n```python\nprint(10//3)  # 3\nprint(10%3)   # 1\n```"
+        ],
+    },
+    "7. třída": {
+        # z 4. třídy (if/else)
+        "Podmínky if/else": [
+            "Podmínka `if/else` a jednoduché porovnání.",
+            "Příklad – podmínka:\n```python\na = 5\nprint('ano' if a > 3 else 'ne')\n```",
+            "Příklad – porovnání:\n```python\nprint(7 > 4)  # True\n```"
+        ],
+        # z 5. třídy (seznamy, len, [-1], součet)
+        "Seznamy: len/sum/[-1]": [
+            "Délka seznamu, poslední prvek, součet prvků.",
+            "Příklad – délka:\n```python\nL = [1, 2, 3]\nprint(len(L))  # 3\n```",
+            "Příklad – poslední prvek:\n```python\nL = [3, 6, 9]\nprint(L[-1])  # 9\n```",
+            "Příklad – součet cyklem:\n```python\nL = [4, 5, 9]\ns = 0\nfor x in L:\n    s += x\nprint(s)  # 18\n```"
+        ],
+        # z 7. třídy (vlastní funkce)
+        "Funkce (def)": [
+            "Vlastní funkce a návratová hodnota.",
+            "Příklad:\n```python\ndef dvojnasobek(x):\n    return x*2\nprint(dvojnasobek(6))  # 12\n```"
+        ],
+    },
+    "8. třída": {
+        # z 8. třídy
+        "Mocniny/odmocniny": [
+            "Mocnina `a**b`, druhá odmocnina `x**0.5`.",
+            "Příklad:\n```python\nprint(7**2)\nprint(49**0.5)\n```"
+        ],
+        "Pythagoras": [
+            "Přepona `sqrt(a*a+b*b)` (zde `**0.5`).",
+            "Příklad:\n```python\na=3; b=4\nprint((a*a + b*b) ** 0.5)  # 5.0\n```"
+        ],
+        "Obvod kruhu (2 dp)": [
+            "Použij π≈3.14 a tisk na 2 dp.",
+            "Příklad:\n```python\nr = 5\nprint(f\"{2*3.14*r:.2f}\")\n```"
+        ],
+    },
+    "9. třída": {
+        # z 9. třídy
+        "Průměr/medián (2 dp)": [
+            "Aritmetický průměr a medián (na 2 dp).",
+            "Příklad – průměr:\n```python\nL=[2,4,6]\nprint(f\"{sum(L)/len(L):.2f}\")  # 4.00\n```",
+            "Příklad – medián u sudého počtu:\n```python\nL=[1,4,7,8]\nm=(L[1]+L[2])/2\nprint(f\"{m:.2f}\")  # 5.50\n```"
+        ],
+        # doplněné krátce (navazuje na MA/7: posloupnosti)
+        "Posloupnosti (aₙ)": [
+            "Arit.: `a_n = a + (n-1)*d`; Geom.: `a_n = a * q**(n-1)`."
+        ],
+        # z 9. třídy
+        "Sestav větu ze slov": [
+            "Spojení slov: `' '.join(slova)`."
+        ],
+    },
+}
+
+def build_it_tasks_by_topic():
+    by = {g:{} for g in ["6. třída","7. třída","8. třída","9. třída"]}
+
+    # 6. třída
+    # Základy: print / + / *
+    basics = []
+    basics += [{"prompt": f"Vytiskni text: Ahoj", "starter":"", "expected_stdout":"Ahoj"}]
+    basics += [{"prompt": f"Vytiskni {a}+{b}", "starter":"", "expected_stdout": str(a+b)} for a,b in [(2,3),(3,4),(5,6)]]
+    basics += [{"prompt": f"Vytiskni {a}*{b}", "starter":"", "expected_stdout": str(a*b)} for a,b in [(2,3),(3,5),(4,4)]]
+    by["6. třída"]["Základy: print / + / *"] = basics
+
+    # Text + délka
+    tdl = []
+    tdl += [{"prompt": "Vytiskni délku slova 'pohádka'", "starter":"", "expected_stdout":"7"}]
+    tdl += [{"prompt": "Vytiskni poslední písmeno slova 'víla'", "starter":"", "expected_stdout":"a"}]
+    tdl += [{"prompt": "Vytiskni větu 'Ahoj světe'", "starter":"", "expected_stdout":"Ahoj světe"}]
+    by["6. třída"]["Text + délka"] = tdl
+
+    # Celá čísla, //, %
+    dm = []
+    for a,b in [(10,3),(11,4),(20,6),(25,7)]:
+        dm.append({"prompt": f"Vytiskni {a}//{b}", "starter":"", "expected_stdout": str(a//b)})
+        dm.append({"prompt": f"Vytiskni {a}%{b}",  "starter":"", "expected_stdout": str(a%b)})
+    by["6. třída"]["Celá čísla, //, %"] = dm
+
+    # 7. třída
+    # Podmínky if/else
+    cond = [{"prompt":"Je 7 > 4? Vytiskni True/False", "starter":"", "expected_stdout":"True"},
+            {"prompt":"Je 3 > 5? Vytiskni True/False", "starter":"", "expected_stdout":"False"}]
+    by["7. třída"]["Podmínky if/else"] = cond
+
+    # Seznamy: len/sum/[-1]
+    lists = []
+    lists += [{"prompt": f"Vytiskni délku seznamu {L}", "starter":"", "expected_stdout": str(len(L))} for L in [[1,2,3],[3,6,9,12]]]
+    lists += [{"prompt": f"Vytiskni poslední prvek seznamu {L}", "starter":"", "expected_stdout": str(L[-1])} for L in [[3,6,9],[2,5,7,11]]]
+    lists += [{"prompt": f"Vytiskni součet prvků seznamu {L}", "starter":"", "expected_stdout": str(sum(L))} for L in [[4,5,9],[1,2,3,4]]]
+    by["7. třída"]["Seznamy: len/sum/[-1]"] = lists
+
+    # Funkce (def)
+    by["7. třída"]["Funkce (def)"] = [
+        {"prompt":"Definuj funkci dvojnasobek(x) a vytiskni dvojnasobek(6)", "starter":"", "expected_stdout":"12"}
+    ]
+
+    # 8. třída
+    by["8. třída"]["Mocniny"] = [{"prompt": f"Vytiskni {n}**{e}", "starter":"", "expected_stdout": str(n**e)} for n,e in [(3,2),(4,2),(5,2),(2,3)]]
+    by["8. třída"]["Odmocniny"] = [{"prompt": f"Vytiskni druhou odmocninu z {s} (pomocí **0.5)", "starter":"", "expected_stdout": str(float(s**0.5))} for s in [9,16,25,36]]
+    by["8. třída"]["Pythagoras"] = [{"prompt": f"Pro odvěsny {a} a {b} vytiskni přeponu", "starter":"", "expected_stdout": str(float(c))} for a,b,c in [(3,4,5),(5,12,13),(6,8,10)]]
+    by["8. třída"]["Obvod kruhu (2 dp)"] = [{"prompt": f"Vytiskni obvod kruhu pro r={r} (π≈3.14, 2 dp)", "starter":"", "expected_stdout": f"{2*3.14*r:.2f}"} for r in [3,4,5,7]]
+
+    # 9. třída
+    by["9. třída"]["Průměr/medián (2 dp)"] = (
+        [{"prompt": f"Vytiskni průměr čísel {arr} (2 dp)", "starter":"", "expected_stdout": f"{sum(arr)/len(arr):.2f}"} for arr in [[2,4,6],[1,2,3,4,5],[10,20,30]]]
+        + [{"prompt": f"Vytiskni medián čísel {arr} (2 dp)", "starter":"", "expected_stdout": f"{(arr[1]+arr[2])/2:.2f}"} for arr in [[1,4,7,8],[2,5,6,10]]]
+    )
+    seq = []
+    for a,d,n in [(3,7,5),(1,9,5),(2,8,4)]:  # arit.
+        seq.append({"prompt": f"Arit. posloupnost a={a}, d={d}, n={n} → vytiskni a_n", "starter":"", "expected_stdout": str(a+(n-1)*d)})
+    for a,q,n in [(2,3,4),(1,2,5)]:         # geom.
+        seq.append({"prompt": f"Geom. posloupnost a={a}, q={q}, n={n} → vytiskni a_n", "starter":"", "expected_stdout": str(a*(q**(n-1)))})
+    by["9. třída"]["Posloupnosti (aₙ)"] = seq
+    by["9. třída"]["Sestav větu ze slov"] = [{"prompt": f"Sestav větu ze slov {slova} (mezera mezi slovy)", "starter":"", "expected_stdout": " ".join(slova)} for slova in [["Učíme","se","Python"],["Pohádky","nás","baví"]]]
+
+    return by
+
+IT_TASKS_BY_TOPIC = build_it_tasks_by_topic()
 
 # =========================
 # IT Úkoly (návrat původních)
@@ -1962,6 +2157,37 @@ def build_it_tasks_by_level():
     return tasks
 
 it_tasks_by_level = build_it_tasks_by_level()
+
+# --- IT: remap původních 1.–9. ročníků do 6.–9. podle náročnosti ---
+IT_REMAP_TO_6_9 = {
+    "6. třída": ["1. třída", "2. třída", "3. třída"],
+    "7. třída": ["4. třída", "5. třída"],
+    "8. třída": ["6. třída", "7. třída"],
+    "9. třída": ["8. třída", "9. třída"],
+}
+
+def _remap_it_levels(notes_src: dict, tasks_src: dict):
+    notes_dst, tasks_dst = {}, {}
+    for dst, srcs in IT_REMAP_TO_6_9.items():
+        merged_notes, merged_tasks = [], []
+        for s in srcs:
+            merged_notes.extend(notes_src.get(s, []))
+            merged_tasks.extend(tasks_src.get(s, []))
+        notes_dst[dst] = merged_notes
+        tasks_dst[dst] = merged_tasks
+    return notes_dst, tasks_dst
+
+# postav kolabované mapy
+_it_notes_6_9, _it_tasks_6_9 = _remap_it_levels(it_notes_by_level, it_tasks_by_level)
+
+# v 1.–5. třídě IT skryj (prázdný seznam), v 6.–9. nahraď kolabovanými
+for _g in [f"{i}. třída" for i in range(1, 6)]:
+    it_tasks_by_level[_g] = []
+for _g, _L in _it_tasks_6_9.items():
+    it_tasks_by_level[_g] = _L
+for _g, _L in _it_notes_6_9.items():
+    it_notes_by_level[_g] = _L
+
 
 # =========================
 # Konstanty + session defaults
@@ -2463,7 +2689,7 @@ def render_topic_select(subject, grade):
     elif subject == "ČJ":
         opts = CJL_TOPICS_BY_GRADE.get(grade, ["Doplň písmeno", "Spočítej slabiky"])
     elif subject == "IT":
-        opts = ["Tisk textu a čísel", "Řetězce a délka", "Seznamy / aritmetika"]
+        opts = IT_TOPICS_BY_GRADE.get(grade, ["(IT bez témat – úlohy podle ročníku)"])
     else:
         opts = ["(bez tématu)"]
 
@@ -2510,27 +2736,11 @@ def render_topic_select(subject, grade):
     return st.session_state[confirmed_key]
 
 def build_dynamic_notes(subject, grade, confirmed_topic):
-    if subject == "MA":
-        # jen formát + případné hinty k tématu
-        fmt = MA_TOPIC_FORMAT.get(grade, {}).get(confirmed_topic, "celé číslo")
-        notes = [f"Téma: **{confirmed_topic}** · Formát odpovědi: **{fmt}**."]
-        for line in MA_TOPIC_HINTS.get(grade, {}).get(confirmed_topic, []):
-            notes.append(line)
-        return notes
-
-    elif subject == "ČJ":
-        base = cjl_notes_by_level.get(grade, [])
-        return [f"Téma: **{confirmed_topic}**."] + (base[:1] if base else [])
-
-    else:  # IT
-        base = it_notes_by_level.get(grade, [])
-        return [f"Téma: **{confirmed_topic}**."] + (base[:1] if base else [])
-
-def build_dynamic_notes(subject, grade, confirmed_topic):
+    """Vrací seznam řádků k zobrazení v expanderu '📚 Poznámky' pro zvolené téma."""
     notes = []
 
     if subject == "MA":
-        # jen formát + případné drobné hinty k tématu
+        # Formát odpovědi + volitelné krátké hinty pro KONKRÉTNÍ téma
         fmt = MA_TOPIC_FORMAT.get(grade, {}).get(confirmed_topic, "celé číslo")
         notes.append(f"Téma: **{confirmed_topic}** · Formát odpovědi: **{fmt}**.")
         for line in MA_TOPIC_HINTS.get(grade, {}).get(confirmed_topic, []):
@@ -2538,13 +2748,14 @@ def build_dynamic_notes(subject, grade, confirmed_topic):
         return notes
 
     elif subject == "ČJ":
-        # 1) základní řádky
+        # Nadpis + obecná věta k ročníku (pokud existuje)
         notes.append(f"Téma: **{confirmed_topic}**.")
         base = cjl_notes_by_level.get(grade, [])
         if base:
-            notes.append(base[0])  # obecná věta k ročníku
+            # zobraz celou sadu poznámek k ročníku (chceš-li jen první: notes.append(base[0]))
+            notes.extend(base)
 
-        # 2) taháky po ročnících (3.–9.) – bezpečně přes globals()
+        # „taháky“ po ročnících (3.–9.) – pokud jsou nadefinované
         grade_to_var = {
             "3. třída": "CJL_TOPIC_NOTES_G3",
             "4. třída": "CJL_TOPIC_NOTES_G4",
@@ -2554,15 +2765,13 @@ def build_dynamic_notes(subject, grade, confirmed_topic):
             "8. třída": "CJL_TOPIC_NOTES_G8",
             "9. třída": "CJL_TOPIC_NOTES_G9",
         }
-        vname = grade_to_var.get(grade)
-        if vname:
-            d = globals().get(vname, {})
-            if isinstance(d, dict):
-                extra = d.get(confirmed_topic)
-                if extra:
-                    notes.append(extra)
+        d = globals().get(grade_to_var.get(grade, ""), {})
+        if isinstance(d, dict):
+            extra = d.get(confirmed_topic)
+            if extra:
+                notes.append(extra)
 
-        # 3) 9. třída – mini-anotace (pokud máš tyto helpery)
+        # 9. třída – mini-anotace (pokud máš helpery)
         if grade == "9. třída":
             try:
                 if confirmed_topic == "Literární druhy a žánry":
@@ -2578,11 +2787,11 @@ def build_dynamic_notes(subject, grade, confirmed_topic):
 
         return notes
 
-    else:  # IT
-        notes.append(f"Téma: **{confirmed_topic}**.")
-        base = it_notes_by_level.get(grade, [])
-        if base:
-            notes.append(base[0])
+    else:
+        notes = [f"Téma: **{confirmed_topic}**."]
+        tnotes = IT_TOPIC_NOTES.get(grade, {}).get(confirmed_topic)
+        if tnotes:
+            notes.extend(tnotes)
         return notes
 
 
@@ -3361,7 +3570,7 @@ with col_left:
 
             # ————— IT —————
             else:
-                tasks = it_tasks_by_level.get(vyber_tridy, [])
+                tasks = IT_TASKS_BY_TOPIC.get(vyber_tridy, {}).get(confirmed_topic, [])
                 if not tasks:
                     st.warning("Pro tuto třídu zatím nejsou IT úlohy.")
                 else:
