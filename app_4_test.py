@@ -2885,11 +2885,10 @@ def generate_grade3_topic_problem(topic: str):
     t = (topic or "").strip().lower()
 
     # 3. třída – množiny (počty prvků)
-    if "množiny" in t and "1..20" in t:
+    if "množiny" in t and any(x in t for x in ["1..20", "1.20", "1-20"]):
         U = list(range(1, 21))
-        # definice A, B jako číselné vlastnosti (lze rozšiřovat)
-        A = {x for x in U if x % 2 == 0}       # sudá
-        B = {x for x in U if x % 3 == 0}       # násobky 3
+        A = {x for x in U if x % 2 == 0}   # sudá
+        B = {x for x in U if x % 3 == 0}   # násobky 3
         kind = random.choice(["A∩B", "A∪B", "A\\B"])
         if kind == "A∩B":
             q = "U={1..20}, A=sudá, B=násobky 3. Kolik prvků má **A ∩ B**?"
@@ -2900,39 +2899,35 @@ def generate_grade3_topic_problem(topic: str):
         else:
             q = "U={1..20}, A=sudá, B=násobky 3. Kolik prvků má **A \\ B**?"
             ans = str(len(A - B))
-    return q, ans, "int", None
+        return q, ans, "int", None
 
     # 3. třída – Sčítání/odčítání do 1000
     if "sčítání" in t or "odčítání" in t or "1000" in t:
         op = random.choice(["+", "-"])
         if op == "+":
             a = random.randint(0, 1000)
-            b = random.randint(0, 1000 - a)  # aby součet nepřesáhl 1000
+            b = random.randint(0, 1000 - a)
         else:
             a = random.randint(0, 1000)
-            b = random.randint(0, a)          # aby výsledek nebyl záporný
+            b = random.randint(0, a)
         q = f"${a} \\, {op} \\, {b}$"
         ans = str(eval(f"{a}{op}{b}"))
-        # typ "int" = krátká číselná odpověď
         return q, ans, "int", None
 
     # 3. třída – Dělení se zbytkem
     if "dělení" in t or "zbytkem" in t:
-        # dělitel 2–9, dělenec 0–1000
         divisor = random.randint(2, 9)
         dividend = random.randint(0, 1000)
         quotient, remainder = divmod(dividend, divisor)
         q = f"${dividend} : {divisor}$"
-        # kanonický formát odpovědi (viz poznámky): "podíl zb. zbytek"
         ans = f"{quotient} zb. {remainder}"
         explain = f"Dělení {dividend} : {divisor} = {quotient} se zbytkem {remainder}."
-        # typ "text" = porovnání textové odpovědi (viz níže normalizace)
         return q, ans, "text", explain
 
-    # Fallback (kdyby přišlo neznámé téma): bezpečné sčítání do 1000
-    a = random.randint(0, 1000); b = random.randint(0, 1000 - a)
+    # Fallback (neznámé téma): bezpečné sčítání do 1000
+    a = random.randint(0, 1000)
+    b = random.randint(0, 1000 - a)
     return f"${a} + {b}$", str(a + b), "int", None
-
 
 # --- 4. třída: témata navázaná na úlohy ---
 def generate_grade4_topic_problem(topic: str):
@@ -3742,4 +3737,5 @@ st.markdown("---")
 st.subheader("⭐ Mravní ponaučení")
 if moral: st.info(moral)
 else:     st.warning("Ponaučení není zadáno.")
+
 
